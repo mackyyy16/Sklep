@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
-import { ShopItem } from '../shop/shared/models/shop-item';
+import { ShopItem } from '../shared/models/shop-item';
 
 @Component({
    templateUrl: './basket.component.html',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PartService } from '../shared/http-services/partService';
-import { IPart } from '../shared/models/part';
+import { PartService } from '../../shared/http-services/partService';
+import { IPart } from '../../shared/models/part';
 
 @Component({
    templateUrl: './add-parts.component.html',

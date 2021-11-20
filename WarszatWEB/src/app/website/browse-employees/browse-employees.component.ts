@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IUser } from '../shared/models/user';
-import { UserService } from '../shared/http-services/userService';
-import { IRepair } from '../shared/models/repair';
-import { UserRepairService } from '../shared/http-services/userRepairService';
+import { IUser } from '../../shared/models/user';
+import { UserService } from '../../shared/http-services/userService';
+import { IRepair } from '../../shared/models/repair';
+import { UserRepairService } from '../../shared/http-services/userRepairService';
 
 @Component({
    templateUrl: './browse-employees.component.html',

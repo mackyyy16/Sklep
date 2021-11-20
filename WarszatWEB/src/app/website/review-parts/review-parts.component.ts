@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IPart } from '../shared/models/part';
-import { PartService } from '../shared/http-services/partService';
+import { IPart } from '../../shared/models/part';
+import { PartService } from '../../shared/http-services/partService';
 
 @Component({
    templateUrl: './review-parts.component.html',

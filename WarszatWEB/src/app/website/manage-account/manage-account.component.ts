@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MenuBarService } from '../shared/MenuBarService';
-import { IUser } from '../shared/models/user';
-import { UserService } from '../shared/http-services/userService';
+import { MenuBarService } from '../../shared/MenuBarService';
+import { IUser } from '../../shared/models/user';
+import { UserService } from '../../shared/http-services/userService';
 
 @Component({
    templateUrl: './manage-account.component.html',
