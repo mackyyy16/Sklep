@@ -1,0 +1,55 @@
+<div class="progressbar">
+    <div class="basket">
+        <h2>Twój koszyk</h2>
+    </div>
+    <div class="delivery">
+        <h2>Dostawa i płatność</h2>
+    </div>
+    <div class="finished">
+        <h2>Gotowe</h2>
+    </div>
+</div>
+
+<div class="container cart-page">
+    <table>
+        <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Ilość</th>
+                <th>Wartość</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let part of parts">
+                <td>
+                    <img src="{{part.imagePath}}">
+                    {{part.name}}|
+                    {{part.price}}
+                </td>
+                <td>
+                    <input 
+                    type="number" 
+                    [(ngModel)]="part.amount"
+                    (change)="editQuantity()"
+                    >
+                </td>
+                <td>{{part.price*part.amount}}</td>
+                <td>
+                    <button (click)="removeItem(part)">
+                        Usuń
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Suma</td>
+                <td>{{sum}}</td>
+            </tr>
+        </table>
+    </div>
+    <button [routerLink]="['/shop/delivery']">Dostawa i płatność</button>
+</div>
