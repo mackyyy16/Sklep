@@ -2,15 +2,13 @@ body
 {
 	background-color: #2f343a;
 	color: #ffffff;
-	font-family: 'Lato', sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	left: 0;
-	right: 0;
-	position: absolute;
-	margin-top: -10px;
+}
+
+.header{
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
 
 .login
@@ -18,13 +16,12 @@ body
 	list-style-type: none;
 	width:30%;
 	float: right;
-	margin-top: 30px;
 	text-align: right;
 }
 
-.logo{
+.logo
+{
 	width:70%;
-	margin-bottom: 10px;
 }
 
 .logo, .login {
@@ -34,38 +31,26 @@ body
 h1
 {
 font-size: 28px;
-margin-left: 50px;
 text-align: center;
 
 }
 
 h2{
 font-size: 15px;
-margin-left: 20px;
 text-align: center;
-font-style: italic;
+font-style:italic;
 color: #c2c0c0;
 
 }
 
-.wrapper
-{
-	width: 100%;
-}
-
-.header
-{
-	width:100%;
-}
-
 .nav
 { 
-	width: 100%;
-	padding:10px 0;
-	background-color: #c34f4f;
-	text-align: center;
-	border-top: 1px solid #751b1b;
-	border-bottom: 1px solid #751b1b;
+ width: 100%;
+ padding:5px 0;
+ background-color: #c34f4f;
+ text-align: center;
+ border-top: 1px solid #751b1b;
+ border-bottom: 1px solid #751b1b;
 }
 
 .info
@@ -116,7 +101,7 @@ color: #c2c0c0;
 {
 	text-align: center;
 	background-color: #222222;
-	padding: 15px;
+	padding: 10px;
 }
 
 .userInfo

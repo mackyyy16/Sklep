@@ -1,16 +1,8 @@
-.top
-{
-    margin-top: 20px;
-    font-size: 24px;
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
+.about-box{
+    text-align: justify;
+    margin: 20px;
 }
 
-.bottom{
-    font-size: 18px;
-    text-align: left;
-    font-style: oblique;
-    margin-left: 20%;
-    margin-right: 20%;
+.about-box p{
+    padding: 10px;
 }
