@@ -65,7 +65,8 @@ td img{
 .total-price table{
     border-top: 3px solid #c34f4f;
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
+    margin-left: 500px
 }
 
 td:last-child{

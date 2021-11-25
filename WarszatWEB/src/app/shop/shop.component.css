@@ -1,3 +1,7 @@
+body{
+    display: grid;
+}
+
 h2{
     text-align: center;
 }

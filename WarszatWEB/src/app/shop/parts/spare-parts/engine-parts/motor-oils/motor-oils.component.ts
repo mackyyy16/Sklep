@@ -10,32 +10,32 @@ export class MotorOilsComponent {
   //from DB
   parts: ShopItem[]=[
     {
-      name: "Olej 1",
-      producent: "Producent 1",
-      price: 100.50,
+      name: "Olej silnikowy",
+      producent: "Total QUARTZ",
+      price: 103,
       amount: 1,
-      imagePath: 'assets/images/olej.jpg'
+      imagePath: 'assets/images/olej-total.jpg'
     },
     {
-      name: "Olej 2",
-      producent: "Producent 2",
-      price: 10,
-      amount: 2,      
-      imagePath: 'assets/images/narzedzia.jpg'
-    },
-    {
-      name: "Olej 3",
-      producent: "Producent 3",
-      price: 100,
-      amount: 5,      
-      imagePath: 'assets/images/klocki.jpg'
-    },
-    {
-      name: "Olej 4",
-      producent: "Producent 4",
-      price: 10.50,
+      name: "Olej silnikowy",
+      producent: "General Motors",
+      price: 103,
       amount: 1,      
-      imagePath: 'assets/images/opony.jpg'
+      imagePath: 'assets/images/olej-general.jpg'
+    },
+    {
+      name: "Olej silnikowy",
+      producent: "Mobil",
+      price: 98,
+      amount: 1,      
+      imagePath: 'assets/images/olej-mobil.jpg'
+    },
+    {
+      name: "Olej silnikowy",
+      producent: "Motul",
+      price: 155,
+      amount: 1,      
+      imagePath: 'assets/images/olej-motul.jpg'
     }
   ];
 
