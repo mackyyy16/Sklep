@@ -1,25 +1,35 @@
-<h2>Podzespoły i części silnika </h2>
+<div class="motor-oils">
+    <h2>Oleje silnikowe</h2>
 
-<br>
-<div class="engine-parts">
-    <div class="motor-oils">
-        <img src="assets/images/olejesilnikowe.jpg">
-        <a class="text" [routerLink]="['/shop/spare-parts/engine-parts/motor-oils']">Oleje silnikowe</a>
-    </div>
-
-    <div class="timing-kits">
-        <img src="assets/images/zestawyrozrzadu.jpg">
-        <a class="text" [routerLink]="['/shop/spare-parts/engine-parts/timing-kits']">Zestawy rozrządu i części układu rozrządu </a>
-    </div>
-
-    <div class="v-belts">
-        <img src="assets/images/paskiklinowe.jpg">
-        <a class="text" [routerLink]="['/shop/spare-parts/engine-parts/v-belts']">Paski klinowe, wielorowkowe</a>
-    </div>
-
-    <div class="rolls">
-        <img src="assets/images/rolki.jpg">
-        <a class="text" [routerLink]="['/shop/spare-parts/engine-parts/rolls']">Rolki i napinacze paska rozrządu</a>
-    </div>
-
-<br>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nazwa</th>
+                <th>Producent</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let part of parts">
+                <td><img src="{{part.imagePath}}"></td>
+                <td>{{part.name}}</td>
+                <td>{{part.producent}}</td>
+                <td>{{part.price}}</td>
+                <td>
+                    <input 
+                    type="number" 
+                    [(ngModel)]="part.amount"
+                    >
+                </td>
+                <td>
+                    <button (click)="addButton(part)">
+                        Dodaj
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

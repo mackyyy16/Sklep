@@ -28,10 +28,6 @@ import { BrakePadsComponent } from './shop/parts/spare-parts/brake-pads/brake-pa
 import { BrakeSystemComponent } from './shop/parts/spare-parts/brake-system/brake-system.component';
 import { DriveSystemComponent } from './shop/parts/spare-parts/drive-system/drive-system.component';
 import { EnginePartsComponent } from './shop/parts/spare-parts/engine-parts/engine-parts.component';
-import { MotorOilsComponent } from './shop/parts/spare-parts/engine-parts/motor-oils/motor-oils.component';
-import { RollsComponent } from './shop/parts/spare-parts/engine-parts/rolls/rolls.component';
-import { TimingKitsComponent } from './shop/parts/spare-parts/engine-parts/timing-kits/timing-kits.component';
-import { VBeltsComponent } from './shop/parts/spare-parts/engine-parts/v-belts/v-belts.component';
 import { DeliveryComponent } from './shop/delivery/delivery.component';
 import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component';
 
@@ -66,10 +62,6 @@ const routes: Routes = [
   { path: 'shop/spare-parts/brake-system', component: BrakeSystemComponent},
   { path: 'shop/spare-parts/drive-system', component: DriveSystemComponent},
   { path: 'shop/spare-parts/engine-parts', component: EnginePartsComponent},
-  { path: 'shop/spare-parts/engine-parts/motor-oils', component: MotorOilsComponent},
-  { path: 'shop/spare-parts/engine-parts/rolls', component: RollsComponent},
-  { path: 'shop/spare-parts/engine-parts/timing-kits', component: TimingKitsComponent},
-  { path: 'shop/spare-parts/engine-parts/v-belts', component: VBeltsComponent},
   { path: 'shop/tires', component: TiresPartsComponent},
   { path: 'shop/tools', component: ToolsPartsComponent},
   { path: 'shop/delivery', component: DeliveryComponent}

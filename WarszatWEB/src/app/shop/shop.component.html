@@ -1,46 +1,110 @@
-<h2>Kategorie produktów</h2>
+<h2>Katalog produktów</h2>
 
 <br>
 <div class="shop">
-    <div class="spare-parts">
-        <img src="assets/images/czesci.jpg">
-        <a class="text" [routerLink]="['/shop/spare-parts']"routerLinkActive="active">Części zamienne</a>
+
+    <div class="card1">
+        <div class="card-content">
+            <h3 class="card-title">Części zamienne</h3>
+            <p class="card-body">
+                Części silnika, rozrząd<br>
+                Klocki, szczęki i tarcze<br>
+                Układ napędowy<br>
+                Układ hamulcowy
+            </p>
+            <button class="button" [routerLink]="['/shop/spare-parts']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-
-    <div class="oils">
-        <img src="assets/images/olej.jpg">
-        <a class="text" [routerLink]="['/shop/oils']">Oleje, płyny</a>
+    <div class="card2">
+        <div class="card-content">
+            <h3 class="card-title">Oleje, płyny</h3>
+            <p class="card-body">
+                Oleje samochodowe<br>
+                Płyny samochodowe<br>
+                Chemia samochdoowa<br>
+                Smary
+            </p>
+            <button class="button" [routerLink]="['/shop/oils']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-    <div class="lighting">
-        <img src="assets/images/oswietlenie.jpg">
-        <a class="text" [routerLink]="['/shop/lighting']">Oświetlenie samochodu</a>
+    <div class="card3">
+        <div class="card-content">
+            <h3 class="card-title">Oświetlenie</h3>
+            <p class="card-body">
+                Światło przednie<br>
+                Światło tylnie<br>
+                Światła sygnałowe<br>
+                Żarówki
+            </p>
+            <button class="button" [routerLink]="['/shop/lighting']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-    <div class="equipment">
-        <img src="assets/images/wnetrze.jpg">
-        <a class="text" [routerLink]="['/shop/equipment']">Wyposażenie wnętrza samochodowego</a>
+    <div class="card4">
+        <div class="card-content">
+            <h3 class="card-title">Wnętrze</h3>
+            <p class="card-body">
+                Elementry sterujące<br>
+                Dywaniki<br>
+                Akcesoria<br>
+                Fotele
+            </p>
+            <button class="button" [routerLink]="['/shop/equipment']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-    <div class="tools">
-        <img src="assets/images/narzedzia.jpg">
-        <a class="text" [routerLink]="['/shop/tools']">Narzędzia i wyposażenie</a>
+    <div class="card5">
+        <div class="card-content">
+            <h3 class="card-title">Narzędzia</h3>
+            <p class="card-body">
+                Narzędzia elektryczne<br>
+                Narzedzia pneumatyczne<br>
+                Narzedzia hydrauliczne<br>
+                Narzedzia warsztatowe
+            </p>
+            <button class="button" [routerLink]="['/shop/tools']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-    <div class="body-parts">
-        <img src="assets/images/czescidonadwozia.jpg">
-        <a class="text" [routerLink]="['/shop/body-parts']">Części do nadwozia</a>
+    <div class="card6">
+        <div class="card-content">
+            <h3 class="card-title">Nadwozie</h3>
+            <p class="card-body">
+                Drzwi<br>
+                Zderzaki<br>
+                Lusterka<br>
+                Reflektory
+            </p>
+            <button class="button" [routerLink]="['/shop/body-parts']"routerLinkActive="active">Pokaż</button>
+        </div>
+    </div>
+    
+    <div class="card7">
+        <div class="card-content">
+            <h3 class="card-title">Opony i felgi</h3>
+            <p class="card-body">
+                Opony<br>
+                Felgi<br>
+                Akcesoria do pielegnacji<br>
+                Śruby, nakrętki, pierścienie
+            </p>
+            <button class="button" [routerLink]="['/shop/tires']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 
-    <div class="tires">
-        <img src="assets/images/opony.jpg">
-        <a class="text" [routerLink]="['/shop/tires']">Opony i felgi</a>
-    </div>
-
-    <div class="electronics">
-        <img src="assets/images/audio.jpg">
-        <a class="text" [routerLink]="['/shop/electronics']">Audio i elektronika</a>
+    <div class="card8">
+        <div class="card-content">
+            <h3 class="card-title">Elektronika</h3>
+            <p class="card-body">
+                Audio i radio<br>
+                Bezpieczeństwo<br>
+                Oprogramowanie<br>
+                Pomoc kierowcy
+            </p>
+            <button class="button" [routerLink]="['/shop/electronics']"routerLinkActive="active">Pokaż</button>
+        </div>
     </div>
 </div>
 

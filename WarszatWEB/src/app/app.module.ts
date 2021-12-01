@@ -28,10 +28,6 @@ import { BrakePadsComponent } from './shop/parts/spare-parts/brake-pads/brake-pa
 import { BrakeSystemComponent } from './shop/parts/spare-parts/brake-system/brake-system.component';
 import { DriveSystemComponent } from './shop/parts/spare-parts/drive-system/drive-system.component';
 import { EnginePartsComponent } from './shop/parts/spare-parts/engine-parts/engine-parts.component';
-import { MotorOilsComponent } from './shop/parts/spare-parts/engine-parts/motor-oils/motor-oils.component';
-import { RollsComponent } from './shop/parts/spare-parts/engine-parts/rolls/rolls.component';
-import { TimingKitsComponent } from './shop/parts/spare-parts/engine-parts/timing-kits/timing-kits.component';
-import { VBeltsComponent } from './shop/parts/spare-parts/engine-parts/v-belts/v-belts.component';
 import { SparePartsComponent } from './shop/parts/spare-parts/spare-parts.component';
 import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component';
 
@@ -62,10 +58,6 @@ import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component
     DriveSystemComponent,
 /////////////////////////
     EnginePartsComponent,
-    MotorOilsComponent,
-    RollsComponent,
-    TimingKitsComponent,
-    VBeltsComponent,
 /////////////////////////
     TiresPartsComponent,
     ToolsPartsComponent,
