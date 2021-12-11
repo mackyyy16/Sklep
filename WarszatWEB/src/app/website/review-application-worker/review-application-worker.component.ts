@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { IRepair } from '../../shared/models/repair';
-import { CarService } from '../../shared/http-services/carService';
-import { ICar } from '../../shared/models/car';
-import { RepairService } from '../../shared/http-services/repairService';
-import { RepairPartService } from '../../shared/http-services/repairPartService';
-import { IPart } from '../../shared/models/part';
-import { IPartWithAmount } from '../../shared/models/part-with-amount';
-import { IRepairPart } from '../../shared/models/repair-part';
-import { PartService } from '../../shared/http-services/partService';
+import { IRepair } from '../../website/shared/models/repair';
+import { CarService } from '../../website/shared/http-services/carService';
+import { ICar } from '../../website/shared/models/car';
+import { RepairService } from '../../website/shared/http-services/repairService';
+import { RepairPartService } from '../../website/shared/http-services/repairPartService';
+import { IPart } from '../../website/shared/models/part';
+import { IPartWithAmount } from '../../website/shared/models/part-with-amount';
+import { IRepairPart } from '../../website/shared/models/repair-part';
+import { PartService } from '../../website/shared/http-services/partService';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { UserService } from '../../shared/http-services/userService';
-import { UserRepairService } from '../../shared/http-services/userRepairService';
-import { IUser } from '../../shared/models/user';
-import { IUserRepair } from '../../shared/models/user-repair';
+import { UserService } from '../../website/shared/http-services/userService';
+import { UserRepairService } from '../../website/shared/http-services/userRepairService';
+import { IUser } from '../../website/shared/models/user';
+import { IUserRepair } from '../../website/shared/models/user-repair';
 
 @Component({
    templateUrl: './review-application-worker.component.html',

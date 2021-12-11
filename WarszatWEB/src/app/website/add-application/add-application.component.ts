@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ICar } from '../../shared/models/car';
-import { CarService } from '../../shared/http-services/carService';
+import { ICar } from '../../website/shared/models/car';
+import { CarService } from '../../website/shared/http-services/carService';
 
 @Component({
    templateUrl: './add-application.component.html',

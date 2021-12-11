@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ICar } from '../../shared/models/car';
-import { IRepair } from '../../shared/models/repair';
-import { CarService } from '../../shared/http-services/carService';
-import { RepairService } from '../../shared/http-services/repairService';
-import { IPartWithAmount } from '../../shared/models/part-with-amount';
-import { RepairPartService } from '../../shared/http-services/repairPartService';
+import { ICar } from '../../website/shared/models/car';
+import { IRepair } from '../../website/shared/models/repair';
+import { CarService } from '../../website/shared/http-services/carService';
+import { RepairService } from '../../website/shared/http-services/repairService';
+import { IPartWithAmount } from '../../website/shared/models/part-with-amount';
+import { RepairPartService } from '../../website/shared/http-services/repairPartService';
 
 @Component({
    templateUrl: './review-application.component.html',

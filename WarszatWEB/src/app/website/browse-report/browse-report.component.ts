@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IRepair } from '../../shared/models/repair';
-import { RepairService } from '../../shared/http-services/repairService';
+import { IRepair } from '../../website/shared/models/repair';
+import { RepairService } from '../../website/shared/http-services/repairService';
 
 @Component({
    templateUrl: './browse-report.component.html',

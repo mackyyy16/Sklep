@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../shared/http-services/userService';
-import { IUser } from '../../shared/models/user';
-import { MenuBarService } from '../../shared/MenuBarService';
+import { UserService } from '../../website/shared/http-services/userService';
+import { IUser } from '../../website/shared/models/user';
+import { MenuBarService } from '../../website/shared/MenuBarService';
 import { Router } from '@angular/router';
 
 @Component({

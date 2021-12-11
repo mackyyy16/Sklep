@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuBarService } from './shared/MenuBarService';
+import { MenuBarService } from './website/shared/MenuBarService';
 import { Router } from '@angular/router';
 import { SharedParameters } from './shop/shared/shared-parameters';
 
