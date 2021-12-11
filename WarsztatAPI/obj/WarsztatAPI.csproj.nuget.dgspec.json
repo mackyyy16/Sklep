@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\porba\\OneDrive\\Pulpit\\warsztat\\WarsztatAPI\\WarsztatAPI.csproj": {}
+    "C:\\Users\\porba\\OneDrive\\Pulpit\\Git\\Sklep\\WarsztatAPI\\WarsztatAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\porba\\OneDrive\\Pulpit\\warsztat\\WarsztatAPI\\WarsztatAPI.csproj": {
+    "C:\\Users\\porba\\OneDrive\\Pulpit\\Git\\Sklep\\WarsztatAPI\\WarsztatAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\porba\\OneDrive\\Pulpit\\warsztat\\WarsztatAPI\\WarsztatAPI.csproj",
+        "projectUniqueName": "C:\\Users\\porba\\OneDrive\\Pulpit\\Git\\Sklep\\WarsztatAPI\\WarsztatAPI.csproj",
         "projectName": "WarsztatAPI",
-        "projectPath": "C:\\Users\\porba\\OneDrive\\Pulpit\\warsztat\\WarsztatAPI\\WarsztatAPI.csproj",
+        "projectPath": "C:\\Users\\porba\\OneDrive\\Pulpit\\Git\\Sklep\\WarsztatAPI\\WarsztatAPI.csproj",
         "packagesPath": "C:\\Users\\porba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\porba\\OneDrive\\Pulpit\\warsztat\\WarsztatAPI\\obj\\",
+        "outputPath": "C:\\Users\\porba\\OneDrive\\Pulpit\\Git\\Sklep\\WarsztatAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,17 +48,29 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[6.0.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[6.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [

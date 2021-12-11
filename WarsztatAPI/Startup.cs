@@ -34,6 +34,8 @@ namespace WarsztatAPI
                 ));
 
             services.AddCors(options => options.AddPolicy("AllowAnyOrigin", e => e.AllowAnyOrigin().Build()));
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +62,10 @@ namespace WarsztatAPI
             {
                 endpoints.MapControllers();
             });
+
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
     }
 }
