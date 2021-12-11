@@ -1,13 +1,23 @@
-.contener{
+.home{
     margin-top: 20px;
-    text-align: center;
-    font-size: 40px;
-    text-align: center;
-    font-style: normal;
+    height: 752px;
 }
 
-.body{
+h2{
+    margin-bottom: 15px;
+    font-size: 35px;
     text-align: center;
-    font-style: oblique;
 }
+
+.home-box p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-box{
+    font-size: 20px;
+    text-align: justify;
+    padding: 25px;
+}
+
 

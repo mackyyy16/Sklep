@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; 
+	padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+	list-style: none;
+}
+
 body 
 {
 	background-color: #000000;
@@ -6,256 +17,64 @@ body
 	font-size: 20px;
 }
 
-.header{
-	padding-bottom: 15px;
-	padding-top: 15px;
-}
-
-.login
-{
-	list-style-type: none;
-	width:30%;
-	float: right;
-	text-align: right;
-}
-
-.logo
-{
-	width:70%;
-}
-
-.logo, .login {
-	display:inline-block;
-}
-
-h1
-{
-font-size: 28px;
-text-align: center;
-
-}
-
-h2{
-font-size: 15px;
-text-align: center;
-font-style:italic;
-color: #c2c0c0;
-
-}
-
-.nav
-{ 
- width: 100%;
- padding:5px 0;
- background-color: #c34f4f;
- text-align: center;
- border-top: 1px solid #751b1b;
- border-bottom: 1px solid #751b1b;
-}
-
-.info
-{ 
+header{
 	width: 100%;
-	background-color: #c34f4f;
-	text-align: center;
-	border-top: 1px solid #751b1b;
-	border-bottom: 1px solid #751b1b;
-	height: 50px;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 50px;
+	transition: 0.5s linear;
+	background: rgb(15, 15, 15);
 }
 
-.years{
-	float:left;
-	width:25%;
-	margin-top: 15px;
+.navbar{
+	display: flex;
 }
 
-.expert{
-	float:left;
-	width:25%;
-	margin-top: 15px;
+.navbar a{
+	padding: 8px 17px;
+	color: white;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 
-.parts{
-	float:left;
-	width:25%;
-	margin-top: 15px;
+.navbar a:hover{
+	background: rgb(0, 255, 157);
+	border-radius: 0.2rem;
+	transition: 0.2s all linear;
 }
-
-.spareparts{
-	float:left;
-	width:25%;
-	margin-top: 15px;
-}
-
 
 .content
 {
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0;
+	border: 0;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-.footer
-{
-	text-align: center;
-	background-color: #222222;
-	padding: 10px;
+.icons{
+	font-size: 22px;
+	cursor: pointer;
+	display: flex;
+	column-gap: 0.8rem;
 }
 
-.userInfo
-{
-	width: 120px;
-	float: right;
-	background-color: transparent;
-	padding: 10px 0;
-	border-top: 1px solid transparent;
-	border-bottom: 1px solid transparent;
-	text-align: center;
-	list-style-type: none;
+.icons img:hover{
+	background: rgb(0, 255, 157);
 }
 
-li > a
-{
-	color: #ffffff;
-	text-decoration: none;
-	display: inline-block;
+.footer{
+	display: flex;
+	background: rgb(15, 15, 15);
+	padding: 15px 30px;
+	justify-items: center;
 }
 
-li > a:hover
-{
-	background-color: #cf6969;
-	color: #451717;
+.contact{
+	margin-left: 33%;
 }
 
-
-ol
-{
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	font-size: 18px;
-	height: 35px;
-	line-height: 200%;
-	display: inline-block;
-}
-
-ol a
-{
-	color: #ffffff;
-	text-decoration: none;
-	display: block;
-}
-
-ol > li
-{
-	float: left;
-	width: 180px;
-	height: 40px;
-	border-right: 1px dashed #751b1b;
-}
-
-ol > li:first-child
-{
-	border-left: 1px dashed #751b1b;
-}
-
-ol > li:hover
-{
-	background-color: #cf6969;
-}
-
-ol > li:hover > a
-{
-	color: #451717;
-}
-
-ol > li > ul
-{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	height: 40px;
-	display: none;
-}
-
-ol > li:hover > ul
-{
-	display: block;
-}
-
-ol > li > ul > li
-{
-	background-color:#cf6969;
-	position: relative;
-	z-index: 100;
-	border-top: 1px dashed #751b1b;
-}
-
-ol > li > ul > li:hover
-{
-	background-color: #c34f4f;
-}
-
-ol > li > ul > li:hover > a
-{
-	color: #451717;
-}
-
-button{
- 	border: 0;
-	background: none;
-	display: block;
-	text-align: left;
-	margin-bottom: 10px;
-	padding: 10px;
-	outline: none;
-	color: rgba(255, 255, 255, 0.561);
-	border-radius: 24px;
-	transition: 0.25s;
-}
-
-.background{
-	height: 400px;
-}
-
-
-/* Modal */
-.modal {
-    /* display: none; Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-	color: black;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }

@@ -6,7 +6,6 @@ import { GalleryComponent } from './website/gallery/gallery.component';
 import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './website/contact/contact.component';
 import { BasketComponent } from './shop/basket/basket.component';
-import { AboutComponent } from './website/about/about.component';
 import { LoginComponent } from './website/login/login.component';
 import { AddApplicationComponent } from './website/add-application/add-application.component';
 import { ReviewApplicationComponent } from './website/review-application/review-application.component';
@@ -46,7 +45,6 @@ const routes: Routes = [
   { path: 'review-application-worker', component: ReviewApplicationWorkerComponent },
   { path: 'browse-employees', component: BrowseEmployeesComponent},
   { path: 'browse-report', component: BrowseReportComponent },
-  { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'basket', component: BasketComponent},
   { path: 'login', component: LoginComponent },
