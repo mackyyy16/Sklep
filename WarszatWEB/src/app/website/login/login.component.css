@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+.login-box{
+    height: 772px;
+}
+
 .register{
     width:50%;
     display: inline-block;

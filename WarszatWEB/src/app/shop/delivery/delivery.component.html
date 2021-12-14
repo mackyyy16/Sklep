@@ -1,6 +1,49 @@
-test1
+<div class="box">
+    <div class="progressbar">
+        <div class="basket">
+            <h2 class="basket-title">Koszyk</h2>
+        </div>
+        <div class="delivery">
+            <h2 class="delivery-title">Dane adresowe</h2>
+        </div>
+        <div class="finished">
+            <h2 class="finished-title">Podsumowanie</h2>
+        </div>
+    </div>
 
+    <div class="delivery-box">
+        <div class="shipping">
+            <h3>Dane odbiorcy przesyłki</h3>
+            <table>
+                <tr>
+                    <td><label>Imię: </label></td>
+                    <td><input type="text">
+                </tr>
+                <tr>
+                    <td><label>Nazwisko: </label></td>
+                    <td><input type="text">
+                </tr>
+                <tr>
+                    <td><label>Telefon: </label></td>
+                    <td><input type="tel" maxlength="9">
+                </tr>
+                <tr>
+                    <td><label>Ulica i numer: </label></td>
+                    <td><input type="text">
+                </tr>
+                <tr>
+                    <td><label>Kod pocztowy: </label></td>
+                    <td><input type="text" maxlength="5">
+                </tr>
+                <tr>
+                    <td><label>Miejscowość: </label></td>
+                    <td><input type="text">
+                </tr>
+            </table>
+        </div>
 
-
-
+        <button [routerLink]="['/summary']">Dalej</button>
+        
+    </div>
+</div>
 

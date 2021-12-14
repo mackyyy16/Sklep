@@ -1,11 +1,32 @@
+/* Nagłówki */
+
+h2{
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: open sans, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Postęp zakupów */
+
 .progressbar{
     width: 100%;
     margin: 20px auto;
     text-align: center;
 }
+
 .basket{
     float: left;
     width: 33%;
+}
+
+.basket-title{
+    color: rgba(0, 255, 157);
 }
 
 .delivery{
@@ -18,61 +39,114 @@
     width: 33%;
 }
 
+/* Koszyk */
+
 .cart-page{
     margin: 10px auto;
     width: 80%;
+    font-size: 18px;
 }
 
-table{
+.table-basket{
+    text-align: center;
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid gray;
 }
 
-.cart-info{
-    display: flex;
-    flex-wrap: wrap;
+.table-basket thead{
+    border: 1px solid gray;
+    font-size: 20px;
+    font-weight: 800;
 }
 
-th{
-    text-align: left;
-    padding: 5px;
-    color: #fff;
-    background: #c34f4f;
-    font-weight: normal;
+.table-basket thead tr th{
+    border-left: 1px solid gray;
+    padding: 10px;
 }
 
-td{
-    padding: 10px 5px;
+.table-basket tbody tr td{
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    font-size: 18px;
 }
 
-td input{
+#amount{
+    width: 50px;
+}
+
+.table-basket tbody tr td input{
     width: 40px;
     height: 30px;
     padding: 5px;
 }
 
-td img{
-    width: 100px;
-    height: 100px;
+.table-basket tbody tr td img{
+    width: 75px;
+    height: 75px;
     margin-right: 10px;
 }
 
+.box-left{
+    text-align: left;
+}
+
+/* Koniec koszyka */
+
+/* Płatność */
+
+.payment{
+    width: 80%;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 190px;
+}
+
+.payment-line{
+    border: 1px solid gray;
+    padding: 7px;
+    height: 25px;
+    margin-bottom: 10px;
+    height: 50%;
+}
+
+.payment-line:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input .transport_1{
+    float: left;
+}
+
+.transport_2{
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.transport_3{
+    margin-left: 30px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.transport_4{
+    float: right;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+img{
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 25px;
+}
+
+/* Koniec płatności */
+
+/* Podsumowanie(cena) */
+
 .total-price{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.total-price table{
-    border-top: 3px solid #c34f4f;
-    width: 100%;
-    max-width: 300px;
-    margin-left: 500px
-}
-
-td:last-child{
-    text-align: right;
-}
-
-th:last-child{
-    text-align: right;
+    margin-top: 30px;
+    display: inline;
 }

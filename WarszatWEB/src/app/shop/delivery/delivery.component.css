@@ -1,0 +1,67 @@
+.progressbar{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.box{
+    height: 752px;
+}
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.basket{
+    float: left;
+    width: 33%;
+}
+
+.delivery{
+    float: left;
+    width: 33%;
+}
+
+.delivery-title, .basket-title{
+    color: rgba(0, 255, 157);
+}
+
+.finished{
+    float: left;
+    width: 33%;
+}
+
+li{
+    border: 1px solid white;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+li:hover{
+    color: rgba(0, 255, 157)
+}
+
+.shipping{
+    float: left;
+    width: 40%;
+}
+
+.payment{
+    float: left;
+    width: 60%;
+}
+
+
+
+
+

@@ -18,6 +18,8 @@ import { BrowseReportComponent } from './website/browse-report/browse-report.com
 import { ManageAccountComponent } from './website/manage-account/manage-account.component';
 import { BasketComponent } from './shop/basket/basket.component';
 import { ShopComponent } from './shop/shop.component';
+import { DeliveryComponent } from './shop/delivery/delivery.component';
+import { SummaryComponent } from './shop/summary/summary.component';
 import { ElectronicsPartsComponent } from './shop/parts/electronics/electronics.component';
 import { EquipmentPartsComponent } from './shop/parts/equipment/equipment.component';
 import { LightingPartsComponent } from './shop/parts/lighting/lighting.component';
@@ -62,7 +64,9 @@ import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component
     TiresPartsComponent,
     ToolsPartsComponent,
     BasketComponent,
-    ShopComponent
+    ShopComponent,
+    SummaryComponent,
+    DeliveryComponent,
   ],
   imports: [
     BrowserModule,

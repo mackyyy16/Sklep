@@ -29,6 +29,7 @@ import { DriveSystemComponent } from './shop/parts/spare-parts/drive-system/driv
 import { EnginePartsComponent } from './shop/parts/spare-parts/engine-parts/engine-parts.component';
 import { DeliveryComponent } from './shop/delivery/delivery.component';
 import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component';
+import { SummaryComponent } from './shop/summary/summary.component';
 
 
 
@@ -47,6 +48,8 @@ const routes: Routes = [
   { path: 'browse-report', component: BrowseReportComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'basket', component: BasketComponent},
+  { path: 'delivery', component: DeliveryComponent},
+  { path: 'summary', component: SummaryComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'manage-account', component: ManageAccountComponent },
@@ -62,7 +65,6 @@ const routes: Routes = [
   { path: 'shop/spare-parts/engine-parts', component: EnginePartsComponent},
   { path: 'shop/tires', component: TiresPartsComponent},
   { path: 'shop/tools', component: ToolsPartsComponent},
-  { path: 'shop/delivery', component: DeliveryComponent}
 ];
 
 @NgModule({
