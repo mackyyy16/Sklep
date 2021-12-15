@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
 import { ShopItem } from '../shared/models/shop-item';
 
@@ -6,12 +6,32 @@ import { ShopItem } from '../shared/models/shop-item';
    templateUrl: './basket.component.html',
   styleUrls: ['./basket.component.css']
 })
-export class BasketComponent {
+export class BasketComponent implements OnDestroy{
   parts: ShopItem[] = SharedParameters.storeItems;
-  sum: number; 
-
+  sum: number=0; 
+  transportCost: number=0;
+  paymentCost: number=0;
+  totalValue: number=0;
+  
   constructor(){
     this.getSum();
+  }
+  ngOnDestroy(): void {
+    SharedParameters.totalValue=this.totalValue;
+  }
+
+  transportValue(value:number){
+    this.transportCost=value;
+    this.updateTotalValue();
+  }
+
+  paymentValue(value:number){
+    this.paymentCost=value;
+    this.updateTotalValue();
+  }
+
+  updateTotalValue(){
+    this.totalValue=this.sum+this.transportCost+this.paymentCost;
   }
 
   removeItem(part: ShopItem){
@@ -24,7 +44,10 @@ export class BasketComponent {
   }
 
   getSum(){
-    if(this.parts.length !==0)
+    if(this.parts.length !==0){
       this.sum = this.parts.map(q => q.price * q.amount).reduce((a, b) => a + b);
+      this.updateTotalValue();
+    }
+
   }
 }

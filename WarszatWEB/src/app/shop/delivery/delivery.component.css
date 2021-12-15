@@ -1,67 +1,187 @@
-.progressbar{
+/* container */
+
+.container{
+    padding: 0;
+    margin: 0;
+    min-height:81.5vh
+}
+
+/* header */
+
+.header{
     width: 100%;
-    margin: 20px auto;
     text-align: center;
-}
-
-.box{
-    height: 752px;
-}
-
-h2{
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-h3{
-    text-align: center;
-    font-size: 26px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .basket{
-    float: left;
     width: 33%;
+    float: left;
 }
 
-.delivery{
-    float: left;
-    width: 33%;
-}
-
-.delivery-title, .basket-title{
+.basket-title, .delivery-title{
     color: rgba(0, 255, 157);
 }
 
-.finished{
-    float: left;
+.delivery{
     width: 33%;
+    float: left;
 }
 
-li{
-    border: 1px solid white;
-    width: 250px;
-    padding: 10px;
+.finished{
+    width: 33%;
+    float: left;
+}
+
+/* contentleft */
+
+.contentleft{
+    width: 50%;
+    float: left;
+}
+
+.adresstitle{
+    margin-left: 265px;
+}
+
+/* adressbox */
+
+.adress-form-group{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+}
+
+input{
+    border: 1px solid #afafaf;
+    color: #424242;
+    height: 45px;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#firstname{
+    width: 200px;
+    margin-left: 220px;
+}
+
+#lastname{
+    width: 200px; 
+    margin-right: 220px;
+}
+
+#street{
+    width: 460px;
+}
+
+#postcode{
+    width: 100px;
+    margin-left: 220px;
+}
+
+#city{
+    width: 300px;
+    margin-right: 220px;
+}
+
+#email{
+    width: 200px;
+    margin-left: 220px;
+}
+
+#phone{
+    width: 200px; 
+    margin-right: 220px;
+}
+
+#addition{
+    width: 460px;
+}
+
+
+/* contentright */
+
+.contentright{
+    width: 50%;
+    float: left;
+}
+
+/* summarybox */
+
+.summarybox{
+    width: 530px;
+    margin-left: 190px;
+    border: 1px solid gray;
+}
+
+.summarybox tr th{
+    text-align: left;
+}
+
+.summarybox tr td{
+    text-align: right;
+}
+
+.summarytitle{
+    padding: 15px;
+    background-color: gray;
+    width: 500px;
     text-align: center;
-    list-style: none;
 }
 
-li:hover{
-    color: rgba(0, 255, 157)
+.summarytable{
+    padding: 20px;
+    font-weight: 400;
 }
 
-.shipping{
-    float: left;
-    width: 40%;
+hr{
+    border: 1px solid #d7d7d7;
+    width: 230px;
 }
 
-.payment{
-    float: left;
-    width: 60%;
+.summarysum{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.summarymoney{
+    font-size: 28px;
+    color: rgba(0, 255, 157);
 }
 
 
+/* infobox */
 
+.infobox{
+    margin-left: 190px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    width: 500px;
+    padding: 15px;
+}
 
+.infobox h3{
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 800;
+}
 
+.imgbox{
+    background-color: black;
+}
+
+#buttonnext{
+    margin-top: 50px;
+    margin-right: 235px;
+    float: right;
+    width: 70px;
+    padding: 10px;
+    background-color: rgba(0, 255, 157);
+}

@@ -1,28 +1,24 @@
-/* Nagłówki */
+/* container */
 
-h2{
-    margin-bottom: 20px;
+.container{
+    padding: 0;
+    margin: 0;
+    min-height:100vh
 }
 
-h3{
-    font-family: open sans, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+/* header */
 
-/* Postęp zakupów */
-
-.progressbar{
+.header{
     width: 100%;
-    margin: 20px auto;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .basket{
-    float: left;
     width: 33%;
+    float: left;
 }
 
 .basket-title{
@@ -30,26 +26,28 @@ h3{
 }
 
 .delivery{
-    float: left;
     width: 33%;
+    float: left;
 }
 
 .finished{
-    float: left;
     width: 33%;
+    float: left;
 }
 
-/* Koszyk */
+/* contentleft */
 
-.cart-page{
-    margin: 10px auto;
-    width: 80%;
-    font-size: 18px;
+.contentleft{
+    width: 50%;
+    float: left;
 }
+
+/* basketbox */
 
 .table-basket{
     text-align: center;
-    width: 100%;
+    margin-left: 150px;
+    width: 800px;
     border-collapse: collapse;
     border: 1px solid gray;
 }
@@ -72,6 +70,10 @@ h3{
     font-size: 18px;
 }
 
+.box-left{
+    text-align: left;
+}
+
 #amount{
     width: 50px;
 }
@@ -88,19 +90,12 @@ h3{
     margin-right: 10px;
 }
 
-.box-left{
-    text-align: left;
-}
+/* paymentbox */
 
-/* Koniec koszyka */
-
-/* Płatność */
-
-.payment{
-    width: 80%;
-    margin-top: 20px;
-    display: inline-block;
-    margin-left: 190px;
+.paymentbox{
+    width: 800px;
+    margin-left: 150px;
+    margin-top: 30px;
 }
 
 .payment-line{
@@ -108,11 +103,10 @@ h3{
     padding: 7px;
     height: 25px;
     margin-bottom: 10px;
-    height: 50%;
 }
 
 .payment-line:hover{
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 255, 157);
 }
 
 input .transport_1{
@@ -142,11 +136,82 @@ img{
     height: 25px;
 }
 
-/* Koniec płatności */
+/* contentright */
 
-/* Podsumowanie(cena) */
+.contentright{
+    width: 50%;
+    float: left;
+}
 
-.total-price{
-    margin-top: 30px;
-    display: inline;
+/* summarybox */
+
+.summarybox{
+    width: 530px;
+    margin-left: 190px;
+    border: 1px solid gray;
+}
+
+.summarybox tr th{
+    text-align: left;
+}
+
+.summarybox tr td{
+    text-align: right;
+}
+
+.summarytitle{
+    padding: 15px;
+    background-color: gray;
+    width: 500px;
+    text-align: center;
+}
+
+.summarytable{
+    padding: 20px;
+    font-weight: 400;
+}
+
+hr{
+    border: 1px solid #d7d7d7;
+    width: 230px;
+}
+
+.summarysum{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.summarymoney{
+    font-size: 28px;
+    color: rgba(0, 255, 157);
+}
+
+
+/* infobox */
+
+.infobox{
+    margin-left: 190px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    width: 500px;
+    padding: 15px;
+}
+
+.infobox h3{
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.imgbox{
+    background-color: black;
+}
+
+#buttonnext{
+    margin-top: 50px;
+    margin-right: 225px;
+    float: right;
+    width: 70px;
+    padding: 10px;
+    background-color: rgba(0, 255, 157);
 }
