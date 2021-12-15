@@ -180,6 +180,15 @@ hr{
 #buttonnext{
     margin-top: 50px;
     margin-right: 235px;
+    margin-left: 10px;
+    float: right;
+    width: 70px;
+    padding: 10px;
+    background-color: rgba(0, 255, 157);
+}
+
+#buttonback{
+    margin-top: 50px;
     float: right;
     width: 70px;
     padding: 10px;

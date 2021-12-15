@@ -92,8 +92,8 @@ header{
 
   /* Modal Content/Box */
   .modal-content {
-    background-color: rgba(182, 180, 180, 0.);
-	color: black;
+    background-color: rgba(182, 180, 180, 0.7);
+	color: rgb(46, 46, 46);
 	border-radius: 2px;
     margin: 20% auto; /* 15% from the top and centered */
     padding: 10px;

@@ -56,11 +56,11 @@
                 <tbody>
                     <tr>
                         <th>Wartość</th>
-                        <td>{{sum}}</td>
+                        <td>{{sum}} zł</td>
                     </tr>
                     <tr>
                         <th>Wysyłka</th>
-                        <td>{{transportCost}}</td>
+                        <td>{{transportCost}} zł</td>
                     </tr>
                     <tr>
                         <th>Koszt płatności</th>
@@ -98,5 +98,6 @@
         </div>
     </div>
     <button id="buttonnext" [routerLink]="['/summary']">Dalej</button>
+    <button id="buttonback" [routerLink]="['/basket']">Powrót</button>
 </div>
 
