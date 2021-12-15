@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
 import { ShopItem } from '../shared/models/shop-item';
+import { SummaryCost } from '../shared/models/summary-cost';
 
 @Component({
    templateUrl: './basket.component.html',
@@ -17,10 +18,13 @@ export class BasketComponent implements OnDestroy{
     this.getSum();
   }
   ngOnDestroy(): void {
-    SharedParameters.globalTotalValue=this.totalValue;
-    SharedParameters.globalTransportCost=this.transportCost;
-    SharedParameters.globalPaymentCost=this.paymentCost;
-    SharedParameters.globalSum=this.sum;
+    const costSummary:SummaryCost={
+      globalPaymentCost:this.paymentCost,
+      globalSum:this.sum,
+      globalTotalValue:this.totalValue,
+      globalTransportCost:this.transportCost,
+    }
+    SharedParameters.costSummary=costSummary;
   }
 
   transportValue(value:number){

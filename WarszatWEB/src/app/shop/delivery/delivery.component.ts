@@ -6,8 +6,9 @@ import { SharedParameters } from '../shared/shared-parameters';
   styleUrls: ['./delivery.component.css']
 })
 export class DeliveryComponent {
-  totalValue: number=SharedParameters.globalTotalValue;
-  transportCost: number=SharedParameters.globalTransportCost;
-  paymentCost: number=SharedParameters.globalPaymentCost;
-  sum: number=SharedParameters.globalSum;
+  totalValue: number=SharedParameters.costSummary.globalTotalValue;
+  transportCost: number=SharedParameters.costSummary.globalTransportCost;
+  paymentCost: number=SharedParameters.costSummary.globalPaymentCost;
+  sum: number=SharedParameters.costSummary.globalSum;
+
 }
