@@ -17,7 +17,10 @@ export class BasketComponent implements OnDestroy{
     this.getSum();
   }
   ngOnDestroy(): void {
-    SharedParameters.totalValue=this.totalValue;
+    SharedParameters.globalTotalValue=this.totalValue;
+    SharedParameters.globalTransportCost=this.transportCost;
+    SharedParameters.globalPaymentCost=this.paymentCost;
+    SharedParameters.globalSum=this.sum;
   }
 
   transportValue(value:number){
