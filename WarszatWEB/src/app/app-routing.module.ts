@@ -30,9 +30,10 @@ import { EnginePartsComponent } from './shop/parts/spare-parts/engine-parts/engi
 import { DeliveryComponent } from './shop/delivery/delivery.component';
 import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component';
 import { SummaryComponent } from './shop/summary/summary.component';
-
-
-
+import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component';
+import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
+import { PaymentTransfer24Component } from './shop/payment-transfer-24/payment-transfer-24.component';
+import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -53,6 +54,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'manage-account', component: ManageAccountComponent },
+  { path: 'blik-payment', component: PaymentBlikComponent},
+  { path: 'transfer-payment', component: PaymentTransferComponent},
+  { path: 'transfer-payment24', component: PaymentTransfer24Component},
+  { path: 'finish-payment', component: FinishOrderComponent},
   { path: 'shop/body-parts', component: BodyPartsComponent},
   { path: 'shop/electronics', component: ElectronicsPartsComponent},
   { path: 'shop/equipment', component: EquipmentPartsComponent},
@@ -65,6 +70,7 @@ const routes: Routes = [
   { path: 'shop/spare-parts/engine-parts', component: EnginePartsComponent},
   { path: 'shop/tires', component: TiresPartsComponent},
   { path: 'shop/tools', component: ToolsPartsComponent},
+  // { path: '', redirectTo: '/home' },
 ];
 
 @NgModule({
