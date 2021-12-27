@@ -15,36 +15,36 @@
         <div class="adressbox">
             <div class="adress-form-group">
                 <div class="address-firstname">
-                    <input type="text" id="firstname" placeholder="Imię*">
+                    <input type="text" id="firstname" placeholder="Imię*" [(ngModel)]="firstname">
                 </div>
                 <div class="address-lastname">
-                    <input type="text" id="lastname" placeholder="Nazwisko*">
+                    <input type="text" id="lastname" placeholder="Nazwisko*" [(ngModel)]="lastname">
                 </div>
             </div>
             <div class="adress-form-group">
                 <div class="address-street">
-                    <input type="text" id="street" placeholder="Ulica i numer*">
+                    <input type="text" id="street" placeholder="Ulica i numer*" [(ngModel)]="street">
                 </div>
             </div>
             <div class="adress-form-group">
                 <div class="address-postcode">
-                    <input type="text" id="postcode" placeholder="Kod pocztowy*" maxlength="6">
+                    <input type="text" id="postcode" placeholder="Kod pocztowy*" maxlength="6" [(ngModel)]="postcode">
                 </div>
                 <div class="address-city">
-                    <input type="text" id="city" placeholder="Miasto*">
+                    <input type="text" id="city" placeholder="Miasto*" [(ngModel)]="city">
                 </div>
             </div>
             <div class="adress-form-group">
                 <div class="address-email">
-                    <input type="text" id="email" placeholder="Adres e-mail*">
+                    <input type="text" id="email" placeholder="Adres e-mail*" [(ngModel)]="email">
                 </div>
                 <div class="address-phone">
-                    <input type="text" id="phone" placeholder="Numer telefonu*">
+                    <input type="text" id="phone" placeholder="Numer telefonu*" [(ngModel)]="phone">
                 </div>
             </div>
             <div class="adress-form-group">
                 <div class="address-addition">
-                    <input type="text" id="addition" placeholder="Dodatkowe uwagi (opcjonalne)">
+                    <input type="text" id="addition" placeholder="Dodatkowe uwagi (opcjonalne)" [(ngModel)]="addition">
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
             Pełna weryfikacja zamówień<br>
         </div>
     </div>
-    <button id="buttonnext" [routerLink]="['/summary']">Dalej</button>
-    <button id="buttonback" [routerLink]="['/basket']">Powrót</button>
+    <button id="buttonnext" (click)="nextButton()">Dalej</button>
+    <button id="buttonback" (click)="backButton()">Powrót</button>
 </div>
 
