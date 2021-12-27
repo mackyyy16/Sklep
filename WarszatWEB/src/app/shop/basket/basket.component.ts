@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
 import { ShopItem } from '../shared/models/shop-item';
-import { SummaryCost } from '../shared/models/summary-cost';
+import { DelivaryAndPaymentCost, SummaryCost } from '../shared/models/summary-cost';
 
 @Component({
    templateUrl: './basket.component.html',
@@ -13,6 +13,8 @@ export class BasketComponent implements OnDestroy{
   transportCost: number=0;
   paymentCost: number=0;
   totalValue: number=0;
+  transport: DelivaryAndPaymentCost;
+  payment: DelivaryAndPaymentCost;
   
   constructor(){
     this.getSum();
@@ -23,17 +25,27 @@ export class BasketComponent implements OnDestroy{
       globalSum:this.sum,
       globalTotalValue:this.totalValue,
       globalTransportCost:this.transportCost,
+      payment: this.payment,
+      transport: this.transport
     }
     SharedParameters.costSummary=costSummary;
   }
 
-  transportValue(value:number){
+  transportValue(value:number, name: string){
     this.transportCost=value;
+    this.transport = {
+      name: name,
+      price: value
+    };
     this.updateTotalValue();
   }
 
-  paymentValue(value:number){
+  paymentValue(value:number, name: string){
     this.paymentCost=value;
+    this.payment = {
+      name: name,
+      price: value
+    };
     this.updateTotalValue();
   }
 

@@ -16,46 +16,46 @@
             <div class="order-details-box">
                 <h3 class="order-details-title">Adres dostawy</h3>
                 <div class="order-details-contaent">
-                    Imię:
+                    Imię: {{firstName}}
                     <br>
-                    Nazwisko:
+                    Nazwisko: {{lastname}}
                     <br>
-                    Kod pocztowy:
+                    Kod pocztowy: {{postcode}}
                     <br>
-                    Telefon
+                    Telefon: {{phone}}
                 </div>
                 <button class="button-1" role="button" [routerLink]="['/delivery']">Edytuj</button>
             </div>
             <div class="order-details-box">
                 <h3 class="order-details-title">Adres rozliczeniowy</h3>
                 <div class="order-details-contaent">
-                    Imię:
+                    Imię: {{firstName}}
                     <br>
-                    Nazwisko:
+                    Nazwisko: {{lastname}}
                     <br>
-                    Kod pocztowy:
+                    Kod pocztowy: {{postcode}}
                     <br>
-                    E-mail:
+                    E-mail: {{email}}
                     <br>
-                    Telefon
+                    Telefon: {{phone}}
                 </div>
                 <button class="button-1" role="button" [routerLink]="['/delivery']">Edytuj</button>
             </div>
             <div class="order-details-box">
                 <h3 class="order-details-title">Opcje dostawy</h3>
                 <div class="order-details-contaent">
-                    Transport:
+                    Transport: {{transport.name}}
                     <br>
-                    Cena:
+                    Cena: {{transport.price}}zł
                 </div>
                 <button class="button-1" role="button" [routerLink]="['/basket']">Edytuj</button>
             </div>
             <div class="order-details-box">
                 <h3 class="order-details-title">Dane płatnicze</h3>
                 <div class="order-details-contaent">
-                    Płatność:
+                    Płatność: {{payment.name}}
                     <br>
-                    Cena:
+                    Cena: {{payment.price}}zł
                 </div>
                 <button class="button-1" role="button" [routerLink]="['/basket']">Edytuj</button>
             </div>
