@@ -3,4 +3,6 @@ export interface IPart{
     name: string;
     producer: string;
     price: number;
+    amount: number;
+    path_to_image: string;
 }

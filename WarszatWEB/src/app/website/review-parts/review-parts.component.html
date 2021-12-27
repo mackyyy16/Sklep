@@ -5,17 +5,21 @@
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Nazwa</th>
                     <th>Producent</th>
                     <th>Cena</th>
+                    <th>Ilosc</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let part of parts">
+                    <td><img src='{{ "assets/images/" + part.path_to_image }}'></td>
                     <td>{{part.name}}</td>
                     <td>{{part.producer}}</td>
                     <td>{{part.price}}</td>
+                    <td>{{part.amount}}</td>
                     <td>
                         <button (click)="removePart(part)">
                             Usuń

@@ -12,7 +12,9 @@ export class AddPartsComponent {
     id_part: 1,
     name: '',
     producer: '',
-    price: null
+    price: null,
+    amount: 0,
+    path_to_image: ''
   };
   
   public parts: IPart[] = [];

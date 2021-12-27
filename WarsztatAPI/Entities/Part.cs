@@ -13,5 +13,7 @@ namespace WarsztatAPI.Entities
         public string name { get; set; }
         public string producer { get; set; }
         public int price { get; set; }
+        public string path_to_image { get; set; }
+        public int amount { get; set; }
     }
 }
