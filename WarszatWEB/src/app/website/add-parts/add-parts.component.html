@@ -23,6 +23,18 @@
                     <label>Zdjecie</label>
                     <input type="text" [(ngModel)]="newPart.path_to_image">
                 </td>
+                <td>
+                    <label>Kategoria</label>
+                    <select [(ngModel)]="selectedValueCategories">
+                        <option *ngFor="let item of categories" [ngValue]="item" >{{item.name}}</option>
+                    </select>
+                </td>
+                <td *ngIf="selectedValueCategories.subCategories.length !== 0">
+                    <label>Subkategoria</label>
+                    <select [(ngModel)]="selectedValueSubcategories">
+                        <option *ngFor="let item of selectedValueCategories.subCategories" [ngValue]="item" >{{item}}</option>
+                    </select>
+                </td>
             </tr>
         </table>
     </div>

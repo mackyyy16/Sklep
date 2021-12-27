@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PartService } from '../../website/shared/http-services/partService';
-import { IPart } from '../../website/shared/models/part';
+import { ICategory, IPart } from '../../website/shared/models/part';
 
 @Component({
    templateUrl: './add-parts.component.html',
@@ -14,8 +14,48 @@ export class AddPartsComponent {
     producer: '',
     price: null,
     amount: 0,
-    path_to_image: ''
+    path_to_image: '',
+    category: '',
+    subcategory: ''
   };
+
+  selectedValueCategories: ICategory = {name: '', subCategories: []};
+  selectedValueSubcategories: string = '';
+  public categories: ICategory[] = [
+    {
+      name: 'body-parts',
+      subCategories: []
+    },
+    {
+      name: 'electronics',
+      subCategories: []
+    },
+    {
+      name: 'equipment',
+      subCategories: []
+    },
+    {
+      name: 'lighting',
+      subCategories: []
+    },
+    {
+      name: 'oils',
+      subCategories: []
+    },
+    {
+      name: 'spare-parts',
+      subCategories: [
+        'brake-pads',
+        'brake-system',
+        'drive-system',
+        'engine-parts'
+      ]
+    },
+    {
+      name: 'tires',
+      subCategories: []
+    }
+  ]
   
   public parts: IPart[] = [];
   public previousPartId = 0;
@@ -28,7 +68,6 @@ export class AddPartsComponent {
   }
 
   add(){
-    debugger;
     let parts;
   
     let sortedParts = [...this.parts.sort((a, b) => a.id_part - b.id_part).reverse()];
@@ -41,6 +80,9 @@ export class AddPartsComponent {
       this.previousPartId = this.previousPartId + 1
       this.newPart.id_part = this.previousPartId;
     }
+
+    this.newPart.category = this.selectedValueCategories.name;
+    this.newPart.subcategory = this.selectedValueSubcategories;
 
     this.partService.addPart(this.newPart).subscribe({
       next: partsFromApi => parts = partsFromApi,

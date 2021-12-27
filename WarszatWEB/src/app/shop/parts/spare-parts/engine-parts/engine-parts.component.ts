@@ -1,42 +1,34 @@
 import { Component } from '@angular/core';
 import { ShopItem } from 'src/app/shop/shared/models/shop-item';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
+import { PartService } from 'src/app/website/shared/http-services/partService';
 
 @Component({
    templateUrl: './engine-parts.component.html',
   styleUrls: ['./engine-parts.component.css']
 })
 export class EnginePartsComponent {
-  parts: ShopItem[]=[
-    {
-      name: "Olej silnikowy",
-      producent: "Total QUARTZ",
-      price: 103,
-      amount: 1,
-      imagePath: 'assets/images/olej-total.jpg'
-    },
-    {
-      name: "Olej silnikowy",
-      producent: "General Motors",
-      price: 103,
-      amount: 1,      
-      imagePath: 'assets/images/olej-general.jpg'
-    },
-    {
-      name: "Olej silnikowy",
-      producent: "Mobil",
-      price: 98,
-      amount: 1,      
-      imagePath: 'assets/images/olej-mobil.jpg'
-    },
-    {
-      name: "Olej silnikowy",
-      producent: "Motul",
-      price: 155,
-      amount: 1,      
-      imagePath: 'assets/images/olej-motul.jpg'
-    }
-  ];
+  public parts: ShopItem[] = [];
+  constructor(private partService: PartService){
+    this.partService.getParts().then(data => {
+      let partsTemp: ShopItem[] =[];
+      
+      data.forEach(element => {
+        if(element.category === 'spare-parts' && element.subcategory === 'engine-parts'){
+          partsTemp.push({
+            id_part: element.id_part,
+            name: element.name,
+            amount: 0,
+            price: element.price,
+            producent: element.producer,
+            imagePath: element.path_to_image
+          });
+        };      
+      });
+      
+      this.parts = partsTemp;
+    });
+  }
 
   addButton(item: ShopItem){
     // debugger;

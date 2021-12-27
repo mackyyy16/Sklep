@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let part of parts">
-                <td><img src="{{part.imagePath}}"></td>
+                <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
                 <td>{{part.name}}</td>
                 <td>{{part.producent}}</td>
                 <td>{{part.price}} zł</td>

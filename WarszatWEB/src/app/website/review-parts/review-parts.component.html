@@ -10,6 +10,8 @@
                     <th>Producent</th>
                     <th>Cena</th>
                     <th>Ilosc</th>
+                    <th>Kategoria</th>
+                    <th>Subkategoria</th>
                     <th></th>
                 </tr>
             </thead>
@@ -20,6 +22,8 @@
                     <td>{{part.producer}}</td>
                     <td>{{part.price}}</td>
                     <td>{{part.amount}}</td>
+                    <td>{{part.category}}</td>
+                    <td>{{part.subcategory}}</td>
                     <td>
                         <button (click)="removePart(part)">
                             Usuń

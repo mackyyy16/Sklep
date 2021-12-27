@@ -23,6 +23,10 @@ export class BrowseReportComponent {
     });
   }
 
+  selectedCategory(value){
+    debugger;
+  }
+
   show(){
     debugger;
     this.sumOfRepairs = 0;

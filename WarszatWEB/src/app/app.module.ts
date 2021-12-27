@@ -34,6 +34,7 @@ import { SparePartsComponent } from './shop/parts/spare-parts/spare-parts.compon
 import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component';
 import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component';
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
+import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { PaymentTransferComponent } from './shop/payment-transfer/payment-transf
     SummaryComponent,
     DeliveryComponent,
     PaymentBlikComponent,
-    PaymentTransferComponent
+    PaymentTransferComponent,
+    FinishOrderComponent
   ],
   imports: [
     BrowserModule,

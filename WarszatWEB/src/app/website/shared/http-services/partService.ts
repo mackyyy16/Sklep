@@ -14,6 +14,7 @@ export class PartService{
 
     }
     private url = 'http://localhost:5001/api/parts';
+    private updateUrl = 'http://localhost:5001/api/parts/updatePartAmount';
 
     async getParts(): Promise<IPart[]>{
         return this.http.get<IPart[]>(this.url)
@@ -25,6 +26,14 @@ export class PartService{
 
     addPart(part: IPart): Observable<IPart>{
         return this.http.post<IPart>(this.url, part)
+            .pipe(
+                tap(data => console.log('Parts: '+ JSON.stringify(data))),
+                catchError(this.error)
+            );
+    }
+
+    updatePart(parts: IPart[]): Observable<IPart>{
+        return this.http.post<IPart>(this.updateUrl, parts)
             .pipe(
                 tap(data => console.log('Parts: '+ JSON.stringify(data))),
                 catchError(this.error)
