@@ -35,6 +35,11 @@
     float: left;
 }
 
+.baskettitle{
+    margin-left: 265px;
+    margin-bottom: 10px;
+}
+
 /* contentleft */
 
 .contentleft{
@@ -44,9 +49,12 @@
 
 /* basketbox */
 
+.basketbox{
+    margin-left: 265px;
+}
+
 .table-basket{
     text-align: center;
-    margin-left: 150px;
     width: 800px;
     border-collapse: collapse;
     border: 1px solid gray;
@@ -94,7 +102,7 @@
 
 .paymentbox{
     width: 800px;
-    margin-left: 150px;
+    margin-left: 265px;
     margin-top: 30px;
 }
 
@@ -209,7 +217,16 @@ hr{
 
 #buttonnext{
     margin-top: 50px;
-    margin-right: 225px;
+    margin-right: 235px;
+    margin-left: 10px;
+    float: right;
+    width: 70px;
+    padding: 10px;
+    background-color: rgba(0, 255, 157);
+}
+
+#buttonback{
+    margin-top: 50px;
     float: right;
     width: 70px;
     padding: 10px;

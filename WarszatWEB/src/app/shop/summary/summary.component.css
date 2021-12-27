@@ -43,7 +43,7 @@
 }
 
 .ordertitle{
-    margin-left: 125px;
+    margin-left: 265px;
     margin-bottom: 10px;
 }
 
@@ -54,11 +54,12 @@
 }
 
 .order-details-box{
-    flex: 1 1 45%;
+    flex: 1 1 25%;
     border-top: 1px solid gray;
     margin-bottom: 5px;
+    margin-left: 140px;
     margin-right: 30px;
-    padding: 5px;
+    padding: 5px 0 5px;
 }
 
 .order-details-title{
@@ -154,7 +155,6 @@ hr{
     appearance: none;
     background-color: #fff;
     border: 1px solid #dbdbdb;
-    border-radius: .375em;
     box-shadow: none;
     box-sizing: border-box;
     color: #363636;
@@ -176,20 +176,7 @@ hr{
     margin-top: 10px;
   }
   
-  .button-1:active {
-    border-color: #4a4a4a;
-    outline: 0;
-  }
-  
-  .button-1:focus {
-    border-color: #485fc7;
-    outline: 0;
-  }
-  
   .button-1:hover {
-    border-color: #b5b5b5;
+    background-color: #b4b4b4;
   }
   
-  .button-1:focus:not(:active) {
-    box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
-  }
