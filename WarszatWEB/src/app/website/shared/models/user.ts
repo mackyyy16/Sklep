@@ -9,4 +9,7 @@ export interface IUser {
         dateofbirth: string;
         phonenumber: number;
         role: string;
+        street: string;
+        postcode: string;
+        city: string;
 }

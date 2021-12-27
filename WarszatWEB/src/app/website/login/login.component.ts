@@ -3,6 +3,7 @@ import { UserService } from '../../website/shared/http-services/userService';
 import { IUser } from '../../website/shared/models/user';
 import { MenuBarService } from '../../website/shared/MenuBarService';
 import { Router } from '@angular/router';
+import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
 
 @Component({
    templateUrl: './login.component.html',
@@ -34,6 +35,16 @@ export class LoginComponent {
         }else{
           this.menuBarService.showWorkerComponent();
         }
+
+        SharedParameters.userInfo = {
+          firstname: user.name,
+          lastname: user.surname,
+          street: user.street,
+          postcode: user.postcode,
+          city: user.city,
+          email: user.email,
+          phone: user.phonenumber.toString()
+        };
 
         //navigate to home
         this.router.navigate(['/home']);

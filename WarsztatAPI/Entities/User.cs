@@ -13,5 +13,8 @@ namespace WarsztatApi.Entities {
         public string dateofbirth { get; set;}
         public int phonenumber { get; set; }
         public string role { get; set; }
+        public string street { get; set; }
+        public string postcode { get; set; }
+        public string city { get; set; }
     }
 }

@@ -23,7 +23,10 @@ export class RegisterComponent {
     phonenumber: null,
     id_user: 0,
     sex: '',
-    role: ''
+    role: '',
+    street: '',
+    postcode: '',
+    city: ''
   };
 
   constructor(private userService: UserService,
@@ -35,7 +38,6 @@ export class RegisterComponent {
 
   register()
   {
-    debugger;
     let val;
     let err;
 

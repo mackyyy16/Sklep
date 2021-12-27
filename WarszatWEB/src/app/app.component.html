@@ -19,22 +19,54 @@
 		<a [routerLink]="['/home']" class="logo">
 			<img src="../..//src/assets/images/logo.jpg">
 		</a>
-		<nav class="navbar">
+		<nav>
 			<ul class="navbar">
 				<li><a [routerLink]="['/home']">Strona główna</a></li>
 				<li><a [routerLink]="['/gallery']">Galeria</a></li>
 				<li><a [routerLink]="['/shop']">Sklep</a></li>
+				<li><a>Serwis</a>
+					<ul>
+						<li><a [routerLink]="['/add-application']">Dodaj zgłoszenie</a></li>
+						<li><a [routerLink]="['/review-application']">Przegladaj zgłoszenie</a></li>
+						<li><a [routerLink]="['/price-list']">Cennik</a></li>
+					</ul>
+				</li>
+				<li *ngIf="(menuBarService.visibleWorkerComponent | async)"><a>Strefa pracownika</a>
+					<ul>
+						<li><a [routerLink]="['/add-parts']">Dodaj część</a></li>
+						<li><a [routerLink]="['/review-parts']">Przegladaj części</a></li>
+						<li><a [routerLink]="['/review-application-worker']">Przegladaj zgłoszenia napraw</a></li>
+					</ul>
+				</li>
+				<li *ngIf="(menuBarService.visibleAdminComponent | async)"><a>Strefa przedsiębiorcy</a>
+					<ul>
+						<li><a [routerLink]="['/browse-employees']">Przeglądaj pracowników</a></li>
+						<li><a [routerLink]="['/browse-report']">Przeglądaj raporty</a></li>
+					</ul>
+				</li>
 				<li><a [routerLink]="['/contact']">Kontakt</a></li>
 			</ul>
 		</nav>
 
 		<div class="icons">
-		<a [routerLink]="['/login']" class="login">
-			<img src="../..//src/assets/images/user-icon.png">
-		</a>
-		<a (click)="goToBasket()" class="basket">
-			<img src="../..//src/assets/images/cart-icon.png">
-		</a>		
+			<div *ngIf="!(menuBarService.isLogged | async)">
+				<li><a [routerLink]="['/login']" class="login">
+					<img src="../..//src/assets/images/user-icon.png">
+				</a></li>
+				<li><a (click)="goToBasket()" class="basket">
+					<img src="../..//src/assets/images/cart-icon.png">
+				</a></li>
+			 </div>
+			 <div *ngIf="(menuBarService.isLogged | async)">
+				 <label>Witaj {{menuBarService.loggedUser.name}}</label><br>
+				 <li><a [routerLink]="['/manage-account']">Zarządzaj kontem</a></li>
+				 <li><a (click)="goToBasket()" class="basket">
+					 <img src="../..//src/assets/images/cart-icon.png">
+				 </a></li>
+				 <button (click)="logOff()">
+					 Wyloguj
+				 </button>
+			 </div>	
 		</div>
 
 	</header>

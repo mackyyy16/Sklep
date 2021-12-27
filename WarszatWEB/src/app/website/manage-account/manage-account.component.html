@@ -25,6 +25,18 @@
             <td><label>Numer telefonu: </label></td>
             <td><input type="text" [(ngModel)]="user.phonenumber"></td>
         </tr>
+        <tr>
+            <td><label>Ulica i numer: </label></td>
+            <td><input type="text" [(ngModel)]="user.street"></td>
+        </tr>
+        <tr>
+            <td><label>Kod pocztowy: </label></td>
+            <td><input type="text" [(ngModel)]="user.postcode"></td>
+        </tr>
+        <tr>
+            <td><label>Miasto: </label></td>
+            <td><input type="text" [(ngModel)]="user.city"></td>
+        </tr>
     </table>   
     <button (click)="save()">
         Zapisz
