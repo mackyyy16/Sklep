@@ -25,21 +25,21 @@
 				<li><a [routerLink]="['/gallery']">Galeria</a></li>
 				<li><a [routerLink]="['/shop']">Sklep</a></li>
 				<li><a>Serwis</a>
-					<ul>
+					<ul class="dropdown">
+						<li><a [routerLink]="['/price-list']">Cennik</a></li>
 						<li><a [routerLink]="['/add-application']">Dodaj zgłoszenie</a></li>
 						<li><a [routerLink]="['/review-application']">Przegladaj zgłoszenie</a></li>
-						<li><a [routerLink]="['/price-list']">Cennik</a></li>
 					</ul>
 				</li>
 				<li *ngIf="(menuBarService.visibleWorkerComponent | async)"><a>Strefa pracownika</a>
-					<ul>
+					<ul class="dropdown">
 						<li><a [routerLink]="['/add-parts']">Dodaj część</a></li>
 						<li><a [routerLink]="['/review-parts']">Przegladaj części</a></li>
 						<li><a [routerLink]="['/review-application-worker']">Przegladaj zgłoszenia napraw</a></li>
 					</ul>
 				</li>
 				<li *ngIf="(menuBarService.visibleAdminComponent | async)"><a>Strefa przedsiębiorcy</a>
-					<ul>
+					<ul class="dropdown"> 
 						<li><a [routerLink]="['/browse-employees']">Przeglądaj pracowników</a></li>
 						<li><a [routerLink]="['/browse-report']">Przeglądaj raporty</a></li>
 					</ul>
@@ -50,22 +50,31 @@
 
 		<div class="icons">
 			<div *ngIf="!(menuBarService.isLogged | async)">
-				<li><a [routerLink]="['/login']" class="login">
-					<img src="../..//src/assets/images/user-icon.png">
-				</a></li>
-				<li><a (click)="goToBasket()" class="basket">
-					<img src="../..//src/assets/images/cart-icon.png">
-				</a></li>
+				<ul>
+					<li class="login">
+						<a [routerLink]="['/login']">
+						<img src="../..//src/assets/images/user-icon.png"></a>
+					</li>
+					<li class="basket"><a (click)="goToBasket()">
+						<img src="../..//src/assets/images/cart-icon.png"></a>
+					</li>
+				</ul>
 			 </div>
 			 <div *ngIf="(menuBarService.isLogged | async)">
-				 <label>Witaj {{menuBarService.loggedUser.name}}</label><br>
-				 <li><a [routerLink]="['/manage-account']">Zarządzaj kontem</a></li>
-				 <li><a (click)="goToBasket()" class="basket">
-					 <img src="../..//src/assets/images/cart-icon.png">
-				 </a></li>
-				 <button (click)="logOff()">
-					 Wyloguj
-				 </button>
+				 <label>Witaj {{menuBarService.loggedUser.name}},</label><br>
+				 <ul>
+					<li class="account">
+						<a [routerLink]="['/manage-account']">Zarządzaj kontem</a>
+					</li>
+					<li class="basket-account">
+						<a (click)="goToBasket()" class="basket">
+						<img src="../..//src/assets/images/cart-icon.png"></a>
+					</li>
+					<li class="logoff-account">
+						<a (click)="logOff()">
+						<img src="../..//src/assets/images/logoff.png"></a>
+					</li>
+				 </ul>
 			 </div>	
 		</div>
 

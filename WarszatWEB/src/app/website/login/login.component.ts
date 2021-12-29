@@ -21,7 +21,6 @@ export class LoginComponent {
 
   login()
   {
-    debugger;
     let isLogged = false;
 
     for (let index = 0; index < this.users.length; index++) {

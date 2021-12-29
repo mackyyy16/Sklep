@@ -18,7 +18,7 @@ export class EnginePartsComponent {
           partsTemp.push({
             id_part: element.id_part,
             name: element.name,
-            amount: 0,
+            amount: 1,
             price: element.price,
             producent: element.producer,
             imagePath: element.path_to_image
