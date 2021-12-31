@@ -35,6 +35,7 @@
 					<ul class="dropdown">
 						<li><a [routerLink]="['/add-parts']">Dodaj część</a></li>
 						<li><a [routerLink]="['/review-parts']">Przegladaj części</a></li>
+						<li><a [routerLink]="['/review-orders']">Przegladaj zamówienia</a></li>
 						<li><a [routerLink]="['/review-application-worker']">Przegladaj zgłoszenia napraw</a></li>
 					</ul>
 				</li>
@@ -103,12 +104,10 @@
 	
 	<div *ngIf="showEmptyBasketDialog" class="modal">
 		<div class="modal-content">
-		<span class="close"(click)=closeEmptyDialogWindow()>&times;</span>
-		<p>Koszyk pusty!</p>
-		
-	</div>
-  
-  </div>
+			<span class="close"(click)=closeEmptyDialogWindow()>&times;</span>
+			<p>Koszyk pusty!</p>		
+		</div>  
+  	</div>
   
 </body>
 </html>

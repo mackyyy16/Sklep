@@ -31,11 +31,13 @@ namespace WarsztatAPI.Controllers
             this.context.SaveChanges();
         }
 
-        [HttpPost, Route("endOrder")]
+        [HttpPost, Route("updateOrder")]
         public void UpdateOrder(Order order)
         {
-            order.end_date = DateTime.Now.ToString("dd-MM-yyyy");
-            this.context.order.Add(order);
+            if(order.status == "Wysłano")
+                order.end_date = DateTime.Now.ToString("dd-MM-yyyy");
+
+            this.context.order.Update(order);
             this.context.SaveChanges();
         }
     }

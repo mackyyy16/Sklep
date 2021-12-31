@@ -34,6 +34,7 @@ import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
 import { PaymentTransfer24Component } from './shop/payment-transfer-24/payment-transfer-24.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
+import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'add-parts', component: AddPartsComponent },
   { path: 'review-parts', component: ReviewPartsComponent },
   { path: 'review-application-worker', component: ReviewApplicationWorkerComponent },
+  { path: 'review-orders', component: ReviewOrdersComponent },
   { path: 'browse-employees', component: BrowseEmployeesComponent},
   { path: 'browse-report', component: BrowseReportComponent },
   { path: 'contact', component: ContactComponent },

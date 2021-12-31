@@ -12,7 +12,7 @@ import { tap, catchError } from 'rxjs/operators';
 
     }
     private url = 'http://localhost:5001/api/order';
-    private urlEndOrder = 'http://localhost:5001/api/order/endOrder';
+    private urlUpdateOrder = 'http://localhost:5001/api/order/updateOrder';
 
     async getOrders(): Promise<IOrder[]>{
         return this.http.get<IOrder[]>(this.url)
@@ -30,8 +30,8 @@ import { tap, catchError } from 'rxjs/operators';
             );
     }
 
-    endOrder(order: IOrder): Observable<IOrder>{
-        return this.http.post<IOrder>(this.urlEndOrder, order)
+    updateOrder(order: IOrder): Observable<IOrder>{
+        return this.http.post<IOrder>(this.urlUpdateOrder, order)
             .pipe(
                 tap(data => console.log('order; '+ JSON.stringify(data))),
                 catchError(this.error)

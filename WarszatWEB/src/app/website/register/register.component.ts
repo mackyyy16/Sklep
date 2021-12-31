@@ -58,7 +58,7 @@ export class RegisterComponent {
       this.user.sex = "women";
     }
 
-    this.user.role = "worker";
+    //this.user.role = "worker";
     this.userService.addUser(this.user).subscribe({
       next: usersFromApi => val = usersFromApi,
       error:err => err=err

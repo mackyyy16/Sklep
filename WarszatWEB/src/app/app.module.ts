@@ -35,6 +35,7 @@ import { BodyPartsComponent } from './shop/parts/body-parts/body-parts.component
 import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component';
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
+import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FinishOrderComponent } from './shop/finish-order/finish-order.component
     AddPartsComponent,
     ReviewPartsComponent,
     ReviewApplicationWorkerComponent,
+    ReviewOrdersComponent,
     BrowseEmployeesComponent,
     BrowseReportComponent,
     ManageAccountComponent,
