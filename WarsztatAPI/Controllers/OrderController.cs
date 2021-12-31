@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Mvc;
+using MimeKit;
 using System;
 using System.Linq;
 using WarsztatAPI.DBContexts;
@@ -29,6 +31,23 @@ namespace WarsztatAPI.Controllers
             order.start_date = DateTime.Now.ToString("dd-MM-yyyy");
             this.context.order.Add(order);
             this.context.SaveChanges();
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress($"Auto Parts nr zamówienia: {order.id_order}", "autoparts24ns@gmail.com"));
+            message.To.Add(new MailboxAddress("Maciej Poreba", "porbamaciek@gmail.com"));
+            message.Subject = "Hi,this is demo email";
+            message.Body = new TextPart("plain")
+            {
+                Text = "Hello,My First Demo Mail it is.Thanks",
+            };
+            using (var client = new SmtpClient())
+            {
+                client.Connect("smtp.gmail.com", 587, false);
+                client.Authenticate("autoparts24ns@gmail.com", "Autoparts24");
+
+                client.Send(message);
+                client.Disconnect(true);
+            }
         }
 
         [HttpPost, Route("updateOrder")]

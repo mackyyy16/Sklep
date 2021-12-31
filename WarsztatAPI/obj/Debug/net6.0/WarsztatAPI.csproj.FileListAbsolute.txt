@@ -66,3 +66,6 @@ C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\obj\Debug\net6.0\WarsztatAP
 C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\obj\Debug\net6.0\ref\WarsztatAPI.dll
 C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\obj\Debug\net6.0\WarsztatAPI.pdb
 C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\obj\Debug\net6.0\WarsztatAPI.genruntimeconfig.cache
+C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\bin\Debug\net6.0\MailKit.dll
+C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\bin\Debug\net6.0\MimeKit.dll
+C:\Users\porba\OneDrive\Pulpit\Git\Sklep\WarsztatAPI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
