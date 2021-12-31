@@ -42,7 +42,7 @@ namespace WarsztatAPI.Controllers
         }
 
         [HttpPost]
-        [Route("/updatePartAmount")]
+        [Route("updatePartAmount")]
         public void UpdatePart(Part[] partInfo)
         {
             foreach (var part in partInfo)
@@ -50,16 +50,17 @@ namespace WarsztatAPI.Controllers
                 var partFromDb = context.part.Where(q => q.id_part == part.id_part).FirstOrDefault();
                 var newAmount = partFromDb.amount - part.amount;
 
-                part.id_part = partFromDb.id_part;
-                part.name = partFromDb.name;
-                part.price = partFromDb.price;
-                part.category = partFromDb.category;
-                part.subcategory = partFromDb.subcategory;
-                part.producer = partFromDb.producer;
-                part.path_to_image = partFromDb.path_to_image;
-                part.amount = newAmount;
+                //part.id_part = partFromDb.id_part;
+                //part.name = partFromDb.name;
+                //part.price = partFromDb.price;
+                //part.category = partFromDb.category;
+                //part.subcategory = partFromDb.subcategory;
+                //part.producer = partFromDb.producer;
+                //part.path_to_image = partFromDb.path_to_image;
+                //part.amount = newAmount;
+                partFromDb.amount = newAmount;
 
-                context.part.Update(part);
+                context.part.Update(partFromDb);
             }            
             context.SaveChanges();
         }

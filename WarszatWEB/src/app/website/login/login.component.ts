@@ -36,6 +36,7 @@ export class LoginComponent {
         }
 
         SharedParameters.userInfo = {
+          id_user: user.id_user,
           firstname: user.name,
           lastname: user.surname,
           street: user.street,
