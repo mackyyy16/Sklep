@@ -61,7 +61,7 @@
 				</ul>
 			 </div>
 			 <div *ngIf="(menuBarService.isLogged | async)">
-				 <label>Witaj {{menuBarService.loggedUser.name}},</label><br>
+				 <label>Witaj <span class="logincolor">{{menuBarService.loggedUser.name}},</span></label><br>
 				 <ul>
 					<li class="account">
 						<a [routerLink]="['/manage-account']">Zarządzaj kontem</a>

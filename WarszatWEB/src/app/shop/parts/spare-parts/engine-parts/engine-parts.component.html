@@ -19,15 +19,10 @@
                 <td>{{part.producent}}</td>
                 <td>{{part.price}} zł</td>
                 <td>
-                    <input 
-                    type="number" 
-                    [(ngModel)]="part.amount"
-                    >
+                    <input type="number" [(ngModel)]="part.amount">
                 </td>
                 <td>
-                    <button (click)="addButton(part)">
-                        Dodaj
-                    </button>
+                    <button (click)="addButton(part)">Dodaj</button>
                 </td>
             </tr>
         </tbody>

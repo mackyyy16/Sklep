@@ -29,8 +29,10 @@ export class SummaryComponent {
     debugger;
     if(this.payment.name === "Płatność BLIK"){
       this.router.navigate(['/blik-payment']);
-    } else if(this.payment.name === "Przelew na konto bankowe"){
+    }else if(this.payment.name === "Przelew na konto bankowe"){
       this.router.navigate(['/transfer-payment']);
+    }else if(this.payment.name === "Pobranie - płatność przy odbiorze"){
+      this.router.navigate(['/finish-payment']);
     }else if(this.payment.name === "Przelewy 24"){
       this.router.navigate(['/transfer-payment24']);
     } else {

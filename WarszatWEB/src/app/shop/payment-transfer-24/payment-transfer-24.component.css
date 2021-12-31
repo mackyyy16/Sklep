@@ -1,0 +1,28 @@
+.bankbox{
+    width: 50%;
+    margin-top: 50px;
+}
+
+.logobox{
+    text-align: center;
+}
+
+.logo{
+    width: 200px;
+}
+
+img{
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.grid{
+    padding: 20px;
+}
+
+
+
+
+
+
