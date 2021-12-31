@@ -19,6 +19,7 @@ export class EnginePartsComponent {
             id_part: element.id_part,
             name: element.name,
             amount: 1,
+            amountInStorage: element.amount,
             price: element.price,
             producent: element.producer,
             imagePath: element.path_to_image
@@ -31,10 +32,14 @@ export class EnginePartsComponent {
   }
 
   addButton(item: ShopItem){
-    // debugger;
-    //jeżeli dodajesz 2x ten sam element to sprawdz czy go nie masz w tablicy
-    //jak tak to dodaj ilosc
-    SharedParameters.storeItems.push({...item});
+     if(item.amount > item.amountInStorage){
+      //wyświetl info ze za duzo elementow
+     }else{
+      //jeżeli dodajesz 2x ten sam element to sprawdz czy go nie masz w tablicy
+      //jak tak to dodaj ilosc
+      SharedParameters.storeItems.push({...item});
+     }
+    
   }
 }
 

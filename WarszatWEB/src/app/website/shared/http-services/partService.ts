@@ -33,6 +33,7 @@ export class PartService{
     }
 
     updatePart(parts: IPart[]): Observable<IPart>{
+        debugger;
         return this.http.post<IPart>(this.updateUrl, parts)
             .pipe(
                 tap(data => console.log('Parts: '+ JSON.stringify(data))),

@@ -5,4 +5,5 @@ export interface ShopItem{
     price: number;
     amount: number;
     imagePath: string; 
+    amountInStorage: number;
   }
