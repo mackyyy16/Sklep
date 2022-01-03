@@ -14,6 +14,7 @@ import { SharedParameters } from '../shared/shared-parameters';
 export class PaymentTransfer24Component {
   
   public orders: IOrder[] = [];
+  public totalCost: number = SharedParameters.costSummary.globalTotalValue;
   
   constructor(private readonly router: Router,
     private readonly partService: PartService,

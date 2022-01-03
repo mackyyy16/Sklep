@@ -33,7 +33,9 @@
                         <td>
                             <input type="number" [(ngModel)]="part.amount" (change)="editQuantity()">
                         </td>
-                        <td id="amount">{{part.price*part.amount}}</td>
+                        <td id="amount">
+                            {{part.price*part.amount}}
+                        </td>
                         <td>
                             <button (click)="removeItem(part)">
                                 Usuń
@@ -152,7 +154,13 @@
             Pełna weryfikacja zamówień<br>
         </div>
     </div>
-    <button id="buttonnext" [routerLink]="['/delivery']">Dalej</button>
+    <button id="buttonnext" (click)="next()">Dalej</button>
     <button id="buttonback" [routerLink]="['/shop']">Powrót</button>
 </div>
 
+<div *ngIf="showLogginInfo" class="modal">
+    <div class="modal-content">
+        <span class="close"(click)=closeLogginWindow()>&times;</span>
+        <p>Aby kontynuować zakupy zaloguj się.</p>		
+    </div>  
+  </div>

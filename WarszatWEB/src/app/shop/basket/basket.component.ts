@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
 import { ShopItem } from '../shared/models/shop-item';
 import { DelivaryAndPaymentCost, SummaryCost } from '../shared/models/summary-cost';
@@ -15,8 +16,9 @@ export class BasketComponent implements OnDestroy{
   totalValue: number=0;
   transport: DelivaryAndPaymentCost;
   payment: DelivaryAndPaymentCost;
+  showLogginInfo: boolean = false;
   
-  constructor(){
+  constructor(private readonly router: Router){
     this.getSum();
   }
   ngOnDestroy(): void {
@@ -54,6 +56,7 @@ export class BasketComponent implements OnDestroy{
   }
 
   removeItem(part: ShopItem){
+    debugger;
     this.parts.splice(this.parts.findIndex(v => v.name === part.name), 1);
     this.getSum();
   }
@@ -67,6 +70,18 @@ export class BasketComponent implements OnDestroy{
       this.sum = this.parts.map(q => q.price * q.amount).reduce((a, b) => a + b);
       this.updateTotalValue();
     }
+  }
 
+  next(){
+    debugger;
+    if(SharedParameters.userInfo?.firstname){
+      this.router.navigate(['/delivery']);
+    }else{
+      this.showLogginInfo =  true;
+    }
+  }
+
+  closeLogginWindow():void {
+    this.showLogginInfo = false;
   }
 }

@@ -1,10 +1,67 @@
 .contener{
-    margin-left: 38%;
+    width: 55%;
+    height: 652px;
 }
 
-.h1{
+.register-box{
+    margin-left: 39%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h1{
     text-align: center;
     font: 200;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+label{
+    padding: 5px;
+}
+
+.name{
+    width: 252px;
+}
+
+.surname{
+    width: 203px;
+}
+
+.login{
+    width: 240px;
+}
+
+.password{
+    width: 237px;
+}
+
+.email{
+    width: 235px;
+}
+
+.birth{
+    width: 157px;
+}
+
+.phone{
+    width: 153px;
+}
+
+.street{
+    width: 175px;
+}
+
+.postcode{
+    width: 166px;
+}
+
+.city{
+    width: 230px;
+}
+
+input[type=radio] {
+    margin-left: 10px;
 }
 
 input[type=text] {
@@ -12,43 +69,55 @@ input[type=text] {
     text-align: left;
     border: 2px solid #c34f4f;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-  }
+    transition: 0.5s;
+    padding: 2px;
+    margin-bottom: 3px;
+}
 
 input[type=number] {
     background: none;
     text-align: left;
     border: 2px solid #c34f4f;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+    transition: 0.5s;
+    padding: 2px;
+    margin-bottom: 3px;
 }
-
 
 button{
     border: 0;
     background: none;
     display: block;
-    margin-left: 13%;
+    margin-left: 48.5%;
     text-align: center;
     border: 1px solid #751b1b;
     padding: 10px 20px;
-    width: 150px;
+    width: 130px;
     outline: none;
     color: rgba(255, 255, 255, 0.781);
-    border-radius: 24px;
     transition: 0.25s;
     background: #c34f4f;
-    }
-
-button:focus{
-    width: 170px;
-    border-color: #751b1b;
 }
 
-label{
-    padding: 1px;
+button:hover{
+    background-color: #751b1b;
+}
+
+.login1{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 75px;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: #c76d6d;
+    margin-left: 5px;
+}
+
+a:hover{
+    color: white
 }
 
   

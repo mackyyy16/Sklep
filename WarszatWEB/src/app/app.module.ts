@@ -36,6 +36,7 @@ import { PaymentBlikComponent } from './shop/payment-blik/payment-blik.component
 import { PaymentTransferComponent } from './shop/payment-transfer/payment-transfer.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
 import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
+import { OrderHistoryComponent } from './shop/order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ReviewOrdersComponent } from './website/review-orders/review-orders.com
     DeliveryComponent,
     PaymentBlikComponent,
     PaymentTransferComponent,
-    FinishOrderComponent
+    FinishOrderComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,

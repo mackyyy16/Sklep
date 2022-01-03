@@ -22,6 +22,14 @@ import { tap, catchError } from 'rxjs/operators';
             ).toPromise();
     }
 
+    async getClientOrders(clientId: number): Promise<IOrder[]>{
+        return this.http.get<IOrder[]>(this.url+'/'+clientId)
+            .pipe(
+                tap(data => console.log('all client orders; '+ JSON.stringify(data))),
+                catchError(this.error)
+            ).toPromise();
+    }
+
     addOrder(order: IOrder): Observable<IOrder>{
         return this.http.post<IOrder>(this.url, order)
             .pipe(

@@ -1,0 +1,58 @@
+<div class="contener">
+    <h1>Przeglądaj zamówienia</h1>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nr zamówienia</th>
+                    <th>Data rozpoczęcia</th>
+                    <th>Data wysłania</th>
+                    <th>Status</th>
+                    <th>Zakupione przedmioty</th>
+                    <th>Cena zamówienia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of clientOrders">
+                    <td>{{order.id_order}}</td>
+                    <td>{{order.start_date}}</td>
+                    <td>{{order.end_date}}</td>
+                    <td>{{order.status}}</td>
+                    <td>
+                        <button (click)="showOrderedParts(order)">
+                            Pokaż przedmioty
+                        </button>
+                    </td>
+                    <td>{{order.order_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>
+<div *ngIf="toggleOrderedParts" class="modal">
+    <div class="modal-content">
+        <span class="close"(click)=closeEmptyDialogWindow()>&times;</span>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa</th>
+                    <th>Producent</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let part of orderParts">
+                    <td><img src='{{ "assets/images/" + part.imagePath }}'></td>
+                    <td>{{part.name}}</td>
+                    <td>{{part.producent}}</td>
+                    <td>{{part.price}} zł</td>
+                    <td>{{part.amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+  </div>

@@ -1,43 +1,43 @@
 <div class="contener">
     <h1>Rejestracja</h1>
-    <div>
+    <div class="register-box">
         <label>Imie: </label>
-        <input type="text" [(ngModel)]="user.name">
+        <input class="name" type="text" [(ngModel)]="user.name">
         <br>
         <label>Nazwisko: </label>
-        <input type="text" [(ngModel)]="user.surname">
+        <input class="surname" type="text" [(ngModel)]="user.surname">
         <br>
         <label>Płeć: </label>
         <label><input type="radio" value="true" name="isMen" [(ngModel)]="isMen"> Mężczyzna</label>
         <label><input type="radio" value="false" name="isMen" [(ngModel)]="isMen"> Kobieta</label>
         <br>
         <label>Login: </label>
-        <input type="text" [(ngModel)]="user.login">
+        <input class="login" type="text" [(ngModel)]="user.login">
         <br>
         <label>Hasło: </label>
-        <input type="text" [(ngModel)]="user.password">
+        <input class="password" type="text" [(ngModel)]="user.password">
         <br>
         <label>E-mail: </label>
-        <input type="text" [(ngModel)]="user.email">
+        <input class="email" type="text" [(ngModel)]="user.email">
         <br>
         <label>Data urodzenia: </label>
-        <input type="text" [(ngModel)]="user.dateofbirth">
+        <input class="birth" type="text" [(ngModel)]="user.dateofbirth">
         <br>
-        <label>Nr telefonu: </label>
-        <input type="number" [(ngModel)]="user.phonenumber">
+        <label>Numer telefonu: </label>
+        <input class="phone" type="number" [(ngModel)]="user.phonenumber">
         <br>
         <label>Ulica i numer: </label>
-        <input type="text" [(ngModel)]="user.street">
+        <input class="street" type="text" [(ngModel)]="user.street">
         <br>
         <label>Kod pocztowy: </label>
-        <input type="text" [(ngModel)]="user.postcode">
+        <input class="postcode" type="text" [(ngModel)]="user.postcode">
         <br>
         <label>Miasto: </label>
-        <input type="text" [(ngModel)]="user.city">
+        <input class="city" type="text" [(ngModel)]="user.city">
         <br>
     </div>
-    <br>
-    <div>
-        <button (click)="register()">Zarejestruj się</button>
+    <button (click)="register()">Zarejestruj się</button>
+    <div class="login1">
+        <span>Masz juz konto?</span><a [routerLink]="['/login']">Zaloguj się</a>
     </div>
 </div>

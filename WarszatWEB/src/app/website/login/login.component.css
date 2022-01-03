@@ -1,30 +1,43 @@
+.login-box{
+    height: 602px;
+    width: 1000px;
+}
+
 .login1{
     width:50%;
     display: inline-block;
 }
 
-.login-box{
-    height: 772px;
-}
-
 .register{
     width:50%;
     display: inline-block;
-    text-align: center;
 }
 
 h2{
+    font-size: 28px;
     color: white;
     font-weight: 600;
     text-align: center;
+    margin-top: 150px;
+    text-align: left;
+    margin-left: 110px;
+    margin-bottom: 30px;
 }
 
 h3{
+    font-size: 24px;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
+    margin-bottom: 20px;
 }
 
+.register ul li{
+    list-style-type: none;
+    margin: 0px;
+    font-size: 16px;
+}
+  
 .box input[type = "text"], .box input[type = "password"]{
     border: 0;
     background: none;
@@ -36,12 +49,11 @@ h3{
     width: 200px;
     outline: none;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+    transition: 0.5s;
 }
 
 .box input[type = "text"]:focus, .box input[type = "password"]:focus{
-    width: 220px;
+    width: 210px;
     border-color: #751b1b;
 }
 
@@ -57,18 +69,16 @@ button{
     margin: 5px auto;
     text-align: center;
     border: 2px solid #751b1b;
-    padding: 14px 40px;
-    width: 170px;
+    padding: 14px 30px;
+    width: 150px;
     outline: none;
     color: rgba(255, 255, 255, 0.561);
-    border-radius: 24px;
     transition: 0.25s;
     background: #c34f4f;
     }
 
-button:focus{
-    width: 170px;
-    border-color: #751b1b;
+button:hover{
+    background-color:  #751b1b;
 }
 
 .login{
@@ -76,12 +86,26 @@ button:focus{
     font-weight: 400;
     text-align: center;
     padding-bottom: 15px;
+    margin-right: 510px;
+    font-size: 18px;
 }
 
 ul{
     list-style-type: none;
     padding-bottom: 10px;
     margin: 0px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-left: 90px;
 }
+
+ul li::before {
+    content: "\279C";
+    color:#c34f4f;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.2em;
+    margin-left: -0.5em;
+  }
   
   

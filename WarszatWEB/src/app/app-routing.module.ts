@@ -35,6 +35,7 @@ import { PaymentTransferComponent } from './shop/payment-transfer/payment-transf
 import { PaymentTransfer24Component } from './shop/payment-transfer-24/payment-transfer-24.component';
 import { FinishOrderComponent } from './shop/finish-order/finish-order.component';
 import { ReviewOrdersComponent } from './website/review-orders/review-orders.component';
+import { OrderHistoryComponent } from './shop/order-history/order-history.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'manage-account', component: ManageAccountComponent },
+  { path: 'orders-history', component: OrderHistoryComponent },
   { path: 'blik-payment', component: PaymentBlikComponent},
   { path: 'transfer-payment', component: PaymentTransferComponent},
   { path: 'transfer-payment24', component: PaymentTransfer24Component},
