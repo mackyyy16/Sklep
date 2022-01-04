@@ -1,21 +1,20 @@
 <div class="contener">
-    <h1>Przeglądaj zamówienia</h1>
-
+    <h1>Historia zamówień</h1>
     <div>
         <table>
             <thead>
                 <tr>
-                    <th>Nr zamówienia</th>
-                    <th>Data rozpoczęcia</th>
-                    <th>Data wysłania</th>
+                    <th>Zamówienie</th>
+                    <th>Data zamówienia</th>
+                    <th>Wysyłka dnia</th>
                     <th>Status</th>
                     <th>Zakupione przedmioty</th>
-                    <th>Cena zamówienia</th>
+                    <th>Koszt całkowity</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let order of clientOrders">
-                    <td>{{order.id_order}}</td>
+                    <td>Zamówienie #{{order.id_order}}</td>
                     <td>{{order.start_date}}</td>
                     <td>{{order.end_date}}</td>
                     <td>{{order.status}}</td>
@@ -24,7 +23,7 @@
                             Pokaż przedmioty
                         </button>
                     </td>
-                    <td>{{order.order_price}}</td>
+                    <td>{{order.order_price}} zł</td>
                 </tr>
             </tbody>
         </table>
@@ -50,7 +49,7 @@
                     <td>{{part.name}}</td>
                     <td>{{part.producent}}</td>
                     <td>{{part.price}} zł</td>
-                    <td>{{part.amount}}</td>
+                    <td>{{part.amount}} szt.</td>
                 </tr>
             </tbody>
         </table>

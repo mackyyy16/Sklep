@@ -1,42 +1,32 @@
 <div class="contener">
     <h1>Dodaj część</h1>
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <label>Nazwa</label>
-                    <input type="text" [(ngModel)]="newPart.name">
-                </td>
-                <td>
-                    <label>Producent</label>
-                    <input type="text" [(ngModel)]="newPart.producer">
-                </td>
-                <td>
-                    <label>Cena</label>
-                    <input type="number" [(ngModel)]="newPart.price">
-                </td>
-                <td>
-                    <label>Ilość</label>
-                    <input type="number" [(ngModel)]="newPart.amount">
-                </td>
-                <td>
-                    <label>Zdjecie</label>
-                    <input type="text" [(ngModel)]="newPart.path_to_image">
-                </td>
-                <td>
-                    <label>Kategoria</label>
-                    <select [(ngModel)]="selectedValueCategories">
-                        <option *ngFor="let item of categories" [ngValue]="item" >{{item.name}}</option>
-                    </select>
-                </td>
-                <td *ngIf="selectedValueCategories.subCategories.length !== 0">
-                    <label>Subkategoria</label>
-                    <select [(ngModel)]="selectedValueSubcategories">
-                        <option *ngFor="let item of selectedValueCategories.subCategories" [ngValue]="item" >{{item}}</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
+    <div class="addbox">
+        <label>Nazwa:</label>
+        <input type="text" [(ngModel)]="newPart.name">
+        <br>
+        <label>Producent:</label>
+        <input type="text" [(ngModel)]="newPart.producer">
+        <br>
+        <label>Cena:</label>
+        <input type="number" [(ngModel)]="newPart.price">
+        <br>
+        <label>Ilość:</label>
+        <input type="number" [(ngModel)]="newPart.amount">
+        <br>
+        <label>Zdjecie:</label>
+        <input type="text" [(ngModel)]="newPart.path_to_image">
+        <br>
+        <label>Kategoria: </label>
+        <select [(ngModel)]="selectedValueCategories">
+            <option *ngFor="let item of categories" [ngValue]="item" >{{item.name}}</option>
+        </select>
+        <br>   
+        <a *ngIf="selectedValueCategories.subCategories.length !== 0">
+            <label>Subkategoria: </label>
+            <select [(ngModel)]="selectedValueSubcategories">
+                <option *ngFor="let item of selectedValueCategories.subCategories" [ngValue]="item" >{{item}}</option>
+            </select>
+        </a>
     </div>
     <br>
     <div>

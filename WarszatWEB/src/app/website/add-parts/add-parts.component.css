@@ -1,5 +1,6 @@
 .contener{
-    height: 100%;
+    margin-top: 150px;
+    height: 554px;
 }
 
 h1{
@@ -8,24 +9,29 @@ h1{
     margin-bottom: 20px;
 }
 
+.addbox{
+    margin-left: 42.5%;
+}
+
 input[type=text] {
+    margin-left: 5px;
+    margin-bottom: 5px;
     background: none;
     text-align: left;
     border: 2px solid #c34f4f;
     color: white;
-    border-radius: 24px;
     transition: 0.25s;
   }
 
 input[type=number] {
+    margin-left: 5px;
+    margin-bottom: 5px;
     background: none;
     text-align: left;
     border: 2px solid #c34f4f;
     color: white;
-    border-radius: 24px;
     transition: 0.25s;
 }
-
 
 button{
     border: 0;
@@ -37,15 +43,13 @@ button{
     width: 150px;
     outline: none;
     color: rgba(255, 255, 255, 0.561);
-    border-radius: 24px;
     transition: 0.25s;
     background: #c34f4f;
     margin-left: 45%;
     }
 
-button:focus{
-    width: 170px;
-    border-color: #751b1b;
+button:hover{
+    background-color: #751b1b;
 }
 
 label{

@@ -1,12 +1,11 @@
 <div class="contener">
-    <h1>Przeglądaj części</h1>
-
+    <h1>Przeglądaj zamówienia</h1>
     <div>
         <table>
             <thead>
                 <tr>
-                    <th>Nr zamówienia</th>
-                    <th>Nr klienta</th>
+                    <th>Zamówienie</th>
+                    <th>Klient</th>
                     <th>Data rozpoczęcia</th>
                     <th>Data zakończenia</th>
                     <th>Status</th>
@@ -19,8 +18,8 @@
             </thead>
             <tbody>
                 <tr *ngFor="let order of orders">
-                    <td>{{order.id_order}}</td>
-                    <td>{{order.id_client}}</td>
+                    <td>Zamówienie #{{order.id_order}}</td>
+                    <td>Id #{{order.id_client}}</td>
                     <td>{{order.start_date}}</td>
                     <td>{{order.end_date}}</td>
                     <td>
@@ -66,7 +65,7 @@
                     <td>{{part.name}}</td>
                     <td>{{part.producent}}</td>
                     <td>{{part.price}} zł</td>
-                    <td>{{part.amount}}</td>
+                    <td>{{part.amount}} szt.</td>
                 </tr>
             </tbody>
         </table>

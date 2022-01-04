@@ -48,40 +48,25 @@
 				<li><a [routerLink]="['/contact']">Kontakt</a></li>
 			</ul>
 		</nav>
-
 		<div class="icons">
 			<div *ngIf="!(menuBarService.isLogged | async)">
 				<ul>
-					<li class="login">
-						<a [routerLink]="['/login']">
-						<img src="../..//src/assets/images/user-icon.png"></a>
-					</li>
-					<li class="basket"><a (click)="goToBasket()">
-						<img src="../..//src/assets/images/cart-icon.png"></a>
-					</li>
+					<li class="login"><a [routerLink]="['/login']"><img src="../..//src/assets/images/user-icon.png"></a></li>
+					<li class="basket"><a (click)="goToBasket()"><img src="../..//src/assets/images/cart-icon.png"></a></li>
 				</ul>
 			 </div>
-			 <div *ngIf="(menuBarService.isLogged | async)">
-				 <label>Witaj <span class="logincolor">{{menuBarService.loggedUser.name}},</span></label><br>
-				 <ul>
-					<li class="account">
-						<a [routerLink]="['/manage-account']">Zarządzaj kontem</a>
+			 <div class="logged" *ngIf="(menuBarService.isLogged | async)">
+				<li>Witaj <span class="logincolor">{{menuBarService.loggedUser.name}},</span></li>
+				<li class="account"><a (click)="goToBasket()"><img src="../..//src/assets/images/cart-icon.png"></a></li>
+					<li class="dropdownlogin"><a><img src="../..//src/assets/images/menu.png"></a>
+						<ul>
+							<li class="account"><a [routerLink]="['/manage-account']"><img src="../..//src/assets/images/user-icon.png"> Zarządzaj kontem</a></li>
+							<li class="account"><a [routerLink]="['/orders-history']"> <img src="../..//src/assets/images/history.png">Historia zamówień</a></li>
+							<li class="account"><a (click)="logOff()"><img src="../..//src/assets/images/logoff.png"> Wyloguj</a></li>
+						</ul>
 					</li>
-					<li class="account">
-						<a [routerLink]="['/orders-history']">Przegladaj zamówienia</a>
-					</li>
-					<li class="basket-account">
-						<a (click)="goToBasket()" class="basket">
-						<img src="../..//src/assets/images/cart-icon.png"></a>
-					</li>
-					<li class="logoff-account">
-						<a (click)="logOff()">
-						<img src="../..//src/assets/images/logoff.png"></a>
-					</li>
-				 </ul>
 			 </div>	
 		</div>
-
 	</header>
 	
 	<div class="content">
@@ -107,8 +92,12 @@
 	
 	<div *ngIf="showEmptyBasketDialog" class="modal">
 		<div class="modal-content">
-			<span class="close"(click)=closeEmptyDialogWindow()>&times;</span>
-			<p>Koszyk pusty!</p>		
+			<h2>KOSZYK</h2>
+			<br>
+			<p class="basketempty">Twój koszyk jest pusty.</p>	
+			<br>
+			<button class="shopbutton" (click)=closeEmptyDialogWindow() [routerLink]="['/shop']">Przejdź do sklepu</button>
+			<button class="close"(click)=closeEmptyDialogWindow()>Zamknij</button>
 		</div>  
   	</div>
   

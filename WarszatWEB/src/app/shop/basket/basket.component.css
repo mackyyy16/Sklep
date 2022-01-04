@@ -239,50 +239,53 @@ hr{
 
 
 /* modal */
-
 .modal {
-    /* display: none; Hidden by default */
-    position: fixed; /* Stay in place */
+    position: fixed;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
   }
 
   /* Modal Content/Box */
   .modal-content {
-    background-color: rgba(182, 180, 180, 0.7);
-	color: rgb(46, 46, 46);
-	border-radius: 2px;
-    margin: 20% auto; /* 15% from the top and centered */
-    padding: 10px;
-	font-weight: 500;
-    border: 1px solid #888;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-top: 60px;
-
-    width: 9%; /* Could be more or less, depending on screen size */
+    background-color: rgb(25,25,25);
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 20% auto;
+    padding: 20px;
+    font-weight: 500;
+    width: 25%;
   }
 
   /* The Close Button */
 .close {
-    color: rgb(63, 63, 63);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-	position: absolute;
-    left: 99%;
-    top: 8.7%;
-    transform: translate(-50%, -50%);
-  }
+	background-color: rgb(192, 192, 192);
+	width: 100px;
+    padding: 5px;
+    margin-left: 20px;
+}
 
-  .close:hover,.close:focus {
-    color: rgb(0, 255, 157);
-    text-decoration: none;
-    cursor: pointer;
-  } 
+.loginempty{
+    text-align: center;
+}
 
+.loginbutton{
+	width: 130px;
+    padding: 5px;
+    margin-left: 110px;
+    margin-bottom: 5px;
+	background-color: #ce4b4b;
+	color: white;
+}
+
+.loginbutton:hover{
+	background-color: #833131;
+}
+
+.close:hover {
+	background-color: white;
+} 

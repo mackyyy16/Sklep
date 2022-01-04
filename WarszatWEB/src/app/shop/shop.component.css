@@ -145,13 +145,13 @@ body{
         hsl(0 0% 0% /1)
     );
     transform: translateY(75%);
-    transition: transform 300ms ease;
+    transition: transform 200ms ease;
     transition-delay: 300ms;
 }
 
 .card-content > *:not(.card-title) {
     opacity: 0;
-    transition: opacity 500ms linear;
+    transition: opacity 200ms linear;
 }
 
 .card1:hover .card-content{
@@ -221,13 +221,14 @@ body{
     content: "";
     position: absolute;
     height: 4px;
+    margin-bottom: 2px;
     left: calc(var(--padding) * -1);
     bottom: 0;
     width: calc( 100% + var(--padding));
-    background: rgb(0, 255, 157);
+    background: #ca4949;
     transform: scaleX(0); 
     transform-origin: left;
-    transition: transform 500ms ease;
+    transition: transform 200ms ease;
 }
 
 .card1:hover .card-title::after {
@@ -266,12 +267,11 @@ body{
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    color: black;
-    background-color: rgba(0, 255, 157);
+    color: white;
+    background-color: #ce4b4b;
     padding: 0.5em 1.15em;
-    border-radius: 0.5em;
 }
 
 .button:hover, button:focus{
-    background-color: white;
+    background-color: #833131;
 }
