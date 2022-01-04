@@ -4,6 +4,7 @@ import { IUser } from '../../website/shared/models/user';
 import { MenuBarService } from '../../website/shared/MenuBarService';
 import { Router } from '@angular/router';
 import { SharedParameters } from 'src/app/shop/shared/shared-parameters';
+import { of } from 'rxjs';
 
 @Component({
    templateUrl: './login.component.html',
@@ -31,8 +32,10 @@ export class LoginComponent {
 
         if(user.role === 'admin'){
           this.menuBarService.showAdminComponent();
-        }else{
+        }else if (user.role === 'worker'){
           this.menuBarService.showWorkerComponent();
+        }else{
+          this.menuBarService.isLogged = of(true);
         }
 
         SharedParameters.userInfo = {

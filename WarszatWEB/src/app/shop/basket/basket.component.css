@@ -82,6 +82,10 @@
     text-align: left;
 }
 
+.box-left th{
+    text-align: center;
+}
+
 #amount{
     width: 50px;
 }

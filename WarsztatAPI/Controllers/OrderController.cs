@@ -39,19 +39,15 @@ namespace WarsztatAPI.Controllers
             this.context.order.Add(order);
             this.context.SaveChanges();
 
+            var userInfo = context.user.Where(q => q.id_user == order.id_client).FirstOrDefault();
+
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress($"Auto Parts", "autoparts24ns@gmail.com"));
             message.To.Add(new MailboxAddress("Maciej Poreba", "porbamaciek@gmail.com"));
-            message.Subject = "[AutoParts] Twoja paczka została przekazana na magazyn";
+            message.Subject = "[AutoParts] Potwierdzenie zamówienia";
             message.Body = new TextPart("plain")
             {
-                Text = $"Twoje zamówienie o numerze {order.id_order} zostało przekazane do spakowania. <br>" +                
-                "<b>UWAGA</b> - od tego momentu nie są możliwe żadne zmiany w zamówionych produktach czy sposobie dostawy." + 
-                "Po realizacji zamówienia, paczka zostanie przekazana do wysłania i będzie oczekiwać na odbiór przez wybraną firme kurierską - oczym poinformujemy osobną wiadomością" +
-                "Prosimy mieć na uwadze, że firmy kurierskie odbierają od nas przesyłki w dni robocze (od poniedziałku do piątku), zazwyczaj między 13:00 a 16:30."+
-                "Dziękujemy za zakuby w stronie AutoParts!"
-
-                
+                Text = $"Witaj {userInfo.name}. Dziękujemy za zakupy na stronie AutoParts.pl Numer twojego zamówienia: {order.id_order}",
             };
             using (var client = new SmtpClient())
             {
@@ -66,15 +62,17 @@ namespace WarsztatAPI.Controllers
         [HttpPost, Route("updateOrder")]
         public void UpdateOrder(Order order)
         {
-            if(order.status == "W trakcie realizacji")
+            if (order.status == "W trakcie realizacji")
             {
+                var userInfo = context.user.Where(q => q.id_user == order.id_client).FirstOrDefault();
+
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress($"Auto Parts nr zamówienia: {order.id_order}", "autoparts24ns@gmail.com"));
+                message.From.Add(new MailboxAddress($"Auto Parts", "autoparts24ns@gmail.com"));
                 message.To.Add(new MailboxAddress("Maciej Poreba", "porbamaciek@gmail.com"));
-                message.Subject = "Hi,this is demo email";
+                message.Subject = "[AutoParts] Twoja paczka została przekazana na magazyn";
                 message.Body = new TextPart("plain")
                 {
-                    Text = "Cześć, twoje zamówienie jest w trakcie realizacji.",
+                    Text = $"Witaj {userInfo.name}. Twoje zamówienie o numerze {order.id_order} zostało przekazane do spakowania. Dziękujemy za zakupy na stronie AutoParts.pl!",
                 };
                 using (var client = new SmtpClient())
                 {
@@ -86,17 +84,18 @@ namespace WarsztatAPI.Controllers
                 }
             }
 
-
             if (order.status == "Wysłano")
             {
+                var userInfo = context.user.Where(q => q.id_user == order.id_client).FirstOrDefault();
+
                 order.end_date = DateTime.Now.ToString("dd-MM-yyyy");
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress($"Auto Parts nr zamówienia: {order.id_order}", "autoparts24ns@gmail.com"));
+                message.From.Add(new MailboxAddress($"Auto Parts", "autoparts24ns@gmail.com"));
                 message.To.Add(new MailboxAddress("Maciej Poreba", "porbamaciek@gmail.com"));
-                message.Subject = "Hi,this is demo email";
+                message.Subject = "[AutoParts] Twoja paczka jest już w drodze";
                 message.Body = new TextPart("plain")
                 {
-                    Text = "Cześć, twoje zamówienie zostało wysłane",
+                    Text = $"Witaj {userInfo.name}. Twoje zamówienie o numerze {order.id_order} zostało spakowane i wysłane. Dziękujemy za zakupy na stronie AutoParts.pl!",
                 };
                 using (var client = new SmtpClient())
                 {

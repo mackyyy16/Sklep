@@ -15,8 +15,8 @@
         <div class="basketbox">
             <table class="table-basket">
                 <thead>
-                    <tr>
-                        <th class="box-left">Nazwa</th>
+                    <tr class="box-left">
+                        <th>Nazwa</th>
                         <th>Ilość</th>
                         <th>Wartość</th>
                         <th>Usuń</th>
@@ -24,23 +24,10 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let part of parts">
-                        <td class="box-left">
-                            <img src='{{ "assets/images/" + part.imagePath }}'>
-                            {{part.name}}
-                            {{part.producent}}
-                            {{part.price}}
-                        </td>
-                        <td>
-                            <input type="number" [(ngModel)]="part.amount" (change)="editQuantity()">
-                        </td>
-                        <td id="amount">
-                            {{part.price*part.amount}}
-                        </td>
-                        <td>
-                            <button (click)="removeItem(part)">
-                                Usuń
-                            </button>
-                        </td>
+                        <td class="box-left"><img src='{{ "assets/images/" + part.imagePath }}'>{{part.producent}} {{part.name}} </td>
+                        <td><input type="number" [(ngModel)]="part.amount" (change)="editQuantity()"></td>
+                        <td id="amount">{{part.price*part.amount}} zł</td>
+                        <td><button class="buttondelete" (click)="removeItem(part)">Usuń</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -49,8 +36,7 @@
             <h3>Sposób transportu</h3>
             <div class="payment-line">
                 <input class=transport_1 name="transport" type="radio" (change)='transportValue(16, "Kurier InPost")'>
-                <label class=transport_2>Kurier InPost</label>
-                <img src="assets/images/inpost.png">
+                <label class=transport_2>Kurier InPost</label><img src="assets/images/inpost.png">
                 <span class=transport_3>Darmowa dostawa przy zamówieniach od 359zł</span>
                 <span class=transport_4>16,00 zł</span>
             </div>
