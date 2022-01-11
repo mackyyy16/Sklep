@@ -22,7 +22,7 @@
 }
 
 .basket-title, .delivery-title, .finished-title{
-    color: rgba(0, 255, 157);
+    color: #ce4b4b
 }
 
 .delivery{
@@ -50,14 +50,14 @@
 .order-summary-details{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 125px;
+    margin-left: 225px;
 }
 
 .order-details-box{
     flex: 1 1 25%;
     border-top: 1px solid gray;
     margin-bottom: 5px;
-    margin-left: 140px;
+    margin-left: 40px;
     margin-right: 30px;
     padding: 5px 0 5px;
 }
@@ -116,7 +116,7 @@ hr{
 
 .summarymoney{
     font-size: 28px;
-    color: rgba(0, 255, 157);
+    color: #df6363
 }
 
 
@@ -147,7 +147,13 @@ hr{
     float: right;
     width: 140px;
     padding: 10px;
-    background-color: rgba(0, 255, 157);
+    color: white;
+    background-color:  #ce4b4b;
+}
+
+#buttonnext:hover{
+    background-color: #833131;
+	color: white;
 }
 
 .button-1 {

@@ -1,40 +1,55 @@
 <div class="contener">
     <h1>Rejestracja</h1>
     <div class="register-box">
-        <label>Imie: </label>
-        <input class="name" type="text" [(ngModel)]="user.name">
-        <br>
-        <label>Nazwisko: </label>
-        <input class="surname" type="text" [(ngModel)]="user.surname">
-        <br>
-        <label>Płeć: </label>
-        <label><input type="radio" value="true" name="isMen" [(ngModel)]="isMen"> Mężczyzna</label>
-        <label><input type="radio" value="false" name="isMen" [(ngModel)]="isMen"> Kobieta</label>
-        <br>
-        <label>Login: </label>
-        <input class="login" type="text" [(ngModel)]="user.login">
-        <br>
-        <label>Hasło: </label>
-        <input class="password" type="text" [(ngModel)]="user.password">
-        <br>
-        <label>E-mail: </label>
-        <input class="email" type="text" [(ngModel)]="user.email">
-        <br>
-        <label>Data urodzenia: </label>
-        <input class="birth" type="text" [(ngModel)]="user.dateofbirth">
-        <br>
-        <label>Numer telefonu: </label>
-        <input class="phone" type="number" [(ngModel)]="user.phonenumber">
-        <br>
-        <label>Ulica i numer: </label>
-        <input class="street" type="text" [(ngModel)]="user.street">
-        <br>
-        <label>Kod pocztowy: </label>
-        <input class="postcode" type="text" [(ngModel)]="user.postcode">
-        <br>
-        <label>Miasto: </label>
-        <input class="city" type="text" [(ngModel)]="user.city">
-        <br>
+        <table>
+            <tr>
+                <td><label>Imie: </label></td>
+                <td><input type="text" [(ngModel)]="user.name"></td>
+            </tr>
+            <tr>
+                <td><label>Nazwisko: </label></td>
+                <td><input type="text" [(ngModel)]="user.surname"></td>
+            </tr>
+            <tr>
+                <td><label>Płeć: </label></td>
+                <td>
+                    <label><input type="radio" value="true" name="isMen" [(ngModel)]="isMen"> Mężczyzna</label>
+                    <label><input type="radio" value="false" name="isMen" [(ngModel)]="isMen"> Kobieta</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Login: </label></td>
+                <td><input type="text" [(ngModel)]="user.login"></td>
+            </tr>
+            <tr>
+                <td><label>Hasło: </label></td>
+                <td><input type="text" [(ngModel)]="user.password"></td>
+            </tr>
+            <tr>
+                <td><label>E-mail: </label></td>
+                <td><input type="text" [(ngModel)]="user.email"></td>
+            </tr>
+            <tr>
+                <td><label>Data urodzenia: </label></td>
+                <td><input type="text" [(ngModel)]="user.dateofbirth"></td>
+            </tr>
+            <tr>
+                <td><label>Numer telefonu: </label></td>
+                <td><input type="number" [(ngModel)]="user.phonenumber"></td>
+            </tr>
+            <tr>
+                <td><label>Ulica i numer: </label></td>
+                <td><input type="text" [(ngModel)]="user.street"></td>
+            </tr>
+            <tr>
+                <td><label>Kod pocztowy: </label></td>
+                <td><input type="text" [(ngModel)]="user.postcode"></td>
+            </tr>
+            <tr>
+                <td><label>Miasto: </label></td>
+                <td><input type="text" [(ngModel)]="user.city"></td>
+            </tr>
+        </table>
     </div>
     <button (click)="register()">Zarejestruj się</button>
     <div class="login1">

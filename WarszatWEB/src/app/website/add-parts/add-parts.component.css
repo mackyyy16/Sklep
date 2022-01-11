@@ -9,10 +9,6 @@ h1{
     margin-bottom: 20px;
 }
 
-.addbox{
-    margin-left: 42.5%;
-}
-
 input[type=text] {
     margin-left: 5px;
     margin-bottom: 5px;
@@ -55,4 +51,9 @@ button:hover{
 label{
     padding: 1px;
     margin-left: 10px;
+}
+
+select{
+    margin-left: 5px;
+    width: 175px;
 }

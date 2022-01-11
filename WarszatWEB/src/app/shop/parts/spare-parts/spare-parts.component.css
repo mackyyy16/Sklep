@@ -4,32 +4,37 @@ h2{
 
 .spare-parts-box{
     height: 772px;
+    width: 55%;
 }
 
 img{
     opacity: 0.7;
+    width: 400px;
+    border-radius: 0.5rem;
+    border: 1px solid white;
 }
 
 .engine-parts {
-    width: 25%;
+    width: 50%;
     display: inline-block;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .brake-pads {
-    width: 25%;
+    width: 50%;
     display: inline-block;
     text-align: center;
 }
 
 .drive-system {
-    width: 25%;
+    width: 50%;
     display: inline-block;
     text-align: center;
 }
 
 .brake-system {
-    width: 25%;
+    width: 50%;
     display: inline-block;
     text-align: center;
 }

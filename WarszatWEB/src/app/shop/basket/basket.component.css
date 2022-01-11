@@ -22,7 +22,7 @@
 }
 
 .basket-title{
-    color: rgba(0, 255, 157);
+    color: #ce4b4b
 }
 
 .delivery{
@@ -118,7 +118,7 @@
 }
 
 .payment-line:hover{
-    color: rgb(0, 255, 157);
+    color: #ce5252
 }
 
 input .transport_1{
@@ -195,7 +195,7 @@ hr{
 
 .summarymoney{
     font-size: 28px;
-    color: rgba(0, 255, 157);
+    color: #df6363
 }
 
 
@@ -226,15 +226,25 @@ hr{
     float: right;
     width: 70px;
     padding: 10px;
-    background-color: rgba(0, 255, 157);
+    color: white;
+    background-color: #ce4b4b
+}
+
+#buttonnext:hover{
+    background-color: #833131;
 }
 
 #buttonback{
     margin-top: 50px;
     float: right;
+    color: white;
     width: 70px;
     padding: 10px;
-    background-color: rgba(0, 255, 157);
+    background-color: #ce4b4b
+}
+
+#buttonback:hover{
+    background-color: #833131;
 }
 
 
@@ -289,3 +299,22 @@ hr{
 .close:hover {
 	background-color: white;
 } 
+
+.buttondelete{
+    width: 50px;
+    padding: 5px;
+	background-color: #ce4b4b;
+	color: white;
+}
+
+.buttondelete:hover{
+	background-color: #833131;
+	color: white;
+}
+
+#infoname{
+    float: right;
+    margin-top: 30px;
+    margin-right: 200px;
+}
+

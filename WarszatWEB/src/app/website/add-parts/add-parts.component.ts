@@ -13,7 +13,7 @@ export class AddPartsComponent {
     name: '',
     producer: '',
     price: null,
-    amount: 0,
+    amount: null,
     path_to_image: '',
     category: '',
     subcategory: ''
